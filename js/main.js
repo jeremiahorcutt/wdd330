@@ -9,5 +9,7 @@ for (let i = 0; i < links.length; i++ ) {
   let list = document.createElement('li');
   let link = document.createElement('a');
   link.setAttribute("src", link[i].url);
-  link.textContene = link[i].label;
+  link.textContent = link[i].label;
+  list.appendChild(link):
+  document.querySelector('ol#tableofcontents').appendChild(list);
 };

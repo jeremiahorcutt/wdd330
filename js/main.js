@@ -7,9 +7,9 @@ const links=[
 
 for (let i = 0; i < links.length; i++ ) {
   let list = document.createElement('li');
-  let link = document.createElement('a');
-  link.setAttribute("src", link[i].url);
-  link.textContent = link[i].label;
-  list.appendChild(link):
+  let alink = document.createElement('a');
+  alink.setAttribute("src", links[i].url);
+  alink.textContent = links[i].label;
+  list.appendChild(alink);
   document.querySelector('ol#tableofcontents').appendChild(list);
 };

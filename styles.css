@@ -1,5 +1,10 @@
 body{
-    text-align:center;
     color:white;
     background-color:#323232;
+}
+a:visited{
+    color:white;
+}
+a{
+    color:white;
 }

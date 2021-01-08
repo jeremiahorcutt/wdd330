@@ -1,6 +1,8 @@
 body{
-    background-image:url('door.jpg')
+    background-image:url('door.jpg');
+    text-align:center;
 }
 h1{
     color:white;
+    margin-top:300px;
 }

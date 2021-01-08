@@ -9,13 +9,15 @@ console.log(loop)
 function fizzbuzz(){
     for(let j = 0; j < 101; j++){
     if(j % 3 == 0){
+        if(j % 5 == 0){
+            console.log("FizzBuzz")
+        }
+        else{
         console.log("Fizz")
+        }
     }
     else if(j % 5 == 0){
         console.log("Buzz")
-    }
-    else if(j % 3 == 0 && j % 5 == 0){
-        console.log("FizzBuzz")
     }
     else{
         console.log(j)

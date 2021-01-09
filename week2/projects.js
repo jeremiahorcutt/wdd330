@@ -74,4 +74,5 @@ function range(start, end){
     while(start < end+1){
         arr.push(start++);
     };
+    console.log(arr);
 };

@@ -4,7 +4,7 @@ for(let i = 0; i < 8; i++){
 loop += "#"
 console.log(loop)
 }
-}
+};
 
 function fizzbuzz(){
     for(let j = 0; j < 101; j++){
@@ -23,4 +23,10 @@ function fizzbuzz(){
         console.log(j)
     }
     }
-}
+};
+
+function minimum(){
+   let a = document.getElementById("a").value;
+   let b = document.getElementById("b").value;
+   console.log(min(a, b));
+};

@@ -71,8 +71,8 @@ function rangeRun(){
 };
 function range(start, end){
     var arr = [];
-    while(start < end+1){
-        arr.push(start++);
-    };
+    for (var i = start; i < end+1; i++) {
+        arr.push(i);
+    }
     console.log(arr);
 };

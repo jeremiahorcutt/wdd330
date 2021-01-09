@@ -28,5 +28,5 @@ function fizzbuzz(){
 function minimum(){
    let a = document.getElementById("a").value;
    let b = document.getElementById("b").value;
-   console.log(min(a, b));
+   console.log(Math.min(a, b));
 };

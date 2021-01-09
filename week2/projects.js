@@ -72,6 +72,7 @@ function rangeRun(){
 function range(st, en){
     var arr = [];
     for(let m = st; m <= en; m++){
+        console.log(m)
         arr.push(m);
     }
     console.log(arr);

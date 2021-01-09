@@ -68,9 +68,9 @@ function rangeRun(){
     let start = document.getElementById("start").value;
     let end = document.getElementById("end").value;
     var arr = [];
-    range(start, end);
+    range(start, end, arr);
 };
-function range(start, end){
+function range(start, end, arr){
     while(start < end+1){
         arr.push(start++);
     };

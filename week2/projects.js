@@ -44,7 +44,7 @@ function countBs(c){
        counter += 0;
      }
    }
-   return counter;
+   console.log(counter);
 }
 function countCharRun(){
 let string = document.getElementById("d").value;

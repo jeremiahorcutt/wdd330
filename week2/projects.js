@@ -69,11 +69,12 @@ function rangeRun(){
     let end = document.getElementById("end").value;
     range(start, end);
 };
-function range(start, end){
+function range(st, en){
     var arr = [];
-    for(let m = start; m <= end; m++){
+    console.log(st);
+    console.log(en);
+    for(let m = st; m <= en; m++){
         arr.push(m);
-        console.log(m)
     }
     console.log(arr);
 };

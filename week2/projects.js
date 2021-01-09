@@ -63,3 +63,14 @@ function countChar(d, e){
     }
     console.log(counter);
 }
+
+function rangeRun(){
+    let start = document.getElementById("start").value;
+    let end = document.getElementById("end").value;
+    range(start, end);
+};
+function range(start, end){
+    for(let i = start; start < (end + 1); i++){
+        console.log(i)
+    }
+}

@@ -30,3 +30,26 @@ function minimum(){
    let b = document.getElementById("b").value;
    console.log(Math.min(a, b));
 };
+function countBRun(){
+let bstring = document.getElementById("c").value;
+countBs(bstring);
+}
+function countBs(c){
+   let counter = 0;
+   for(let k = 0; k < c.length; k++){
+     if(c[k] == "B"){
+         counter += 1;
+     }
+     else{
+       counter += 0;
+     }
+   }
+}
+function countCharRun(){
+let string = document.getElementById("d").value;
+let char = document.getElementById("e").value;
+countChar(string, char);
+}
+function countChar(d, e){
+
+}

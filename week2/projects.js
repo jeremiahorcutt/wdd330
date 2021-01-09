@@ -52,5 +52,14 @@ let char = document.getElementById("e").value;
 countChar(string, char);
 }
 function countChar(d, e){
-
+    let counter = 0;
+    for(let l = 0; l < d.length;){
+        if(d[l] == e){
+           counter += 1;
+        }
+        else{
+            counter += 0;
+        }
+    }
+    console.log(counter);
 }

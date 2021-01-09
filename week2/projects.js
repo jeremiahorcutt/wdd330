@@ -53,7 +53,7 @@ countChar(string, char);
 }
 function countChar(d, e){
     let counter = 0;
-    for(let l = 0; l < d.length;){
+    for(let l = 0; l < d.length; l++){
         if(d[l] == e){
            counter += 1;
         }

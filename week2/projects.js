@@ -67,10 +67,11 @@ function countChar(d, e){
 function rangeRun(){
     let start = document.getElementById("start").value;
     let end = document.getElementById("end").value;
+    var arr = [];
     range(start, end);
 };
 function range(start, end){
-    for(let i = start; start < (end + 1); i++){
-        console.log(i)
-    }
-}
+    while(start < end+1){
+        arr.push(start++);
+    };
+};

@@ -100,8 +100,10 @@ function reverseArrayInPlace(arr){
    for(let i = 0; i < Math.floor(arr.length / 2); i++){
        a = arr[i];
        b = arr[arr.length - 1 - i];
-       arr.push(b);
-       arr.shift(a);
+       arr.slice[a];
+       arr.slice[b];
+       arr.unshift(b);
+       arr.push(a);
    }c
    console.log("Reverse Array in place");
    console.log(arr);

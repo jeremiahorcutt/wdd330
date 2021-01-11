@@ -91,6 +91,7 @@ function reverseArray(arr){
     for(let i = 0; i < arr.length; i++){
        newArr.unshift(arr[i]);
   }
+  console.log("Reverse Array");
   console.log(newArr);
 };
 function reverseArrayInPlace(arr){
@@ -101,5 +102,7 @@ function reverseArrayInPlace(arr){
        b = arr[arr.length - 1 - i];
        arr.push(b);
        arr.shift(a);
-   }
+   }c
+   console.log("Reverse Array in place");
+   console.log(arr);
 };

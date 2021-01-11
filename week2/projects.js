@@ -62,7 +62,7 @@ function countChar(d, e){
         }
     }
     console.log(counter);
-}
+};
 
 function rangeRun(){
     let start = document.getElementById("start").value;
@@ -76,4 +76,30 @@ function range(st, en){
         arr.push(m);
     }
     console.log(arr);
+};
+
+function reverseArrayRun(){
+    num1 = document.getElementById("num1").value;
+    num2 = document.getElementById("num2").value;
+    num3 = document.getElementById("num3").value;
+    numArr = [num1, num2, num3];
+    reverseArray(numArr);
+    reverseArrayInPlace(numArr);
+};
+function reverseArray(arr){
+    let newArr = []
+    for(let i = 0; i < arr.length; i++){
+       newArr.unshift(arr[i]);
+  }
+  console.log(newArr);
+};
+function reverseArrayInPlace(arr){
+    let a = 0;
+    let b = 0;
+   for(let i = 0; i < Math.floor(arr.length / 2); i++){
+       a = arr[i];
+       b = arr[arr.length - 1 - i];
+       arr.push(b);
+       arr.shift(a);
+   }
 };

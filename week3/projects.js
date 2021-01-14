@@ -1,3 +1,4 @@
+//this calculator
 function this_calculator(){
 let calculator = {
     read(){
@@ -16,6 +17,7 @@ let calculator = {
   alert( calculator.sum() );
   alert( calculator.mul() );
 }
+//callback calculator
 function call_back(){
     calculator(add);
     calculator(sub);
@@ -23,9 +25,11 @@ function call_back(){
 }
 function get_number1(){
    let a = parseFloat(document.getElementById("number_1").value);
+   return a;
 }
 function get_number2(){
     let b = parseFloat(document.getElementById("number_2").value);
+    return b;
  }
  function add(a, b){
      return a + b;

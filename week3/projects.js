@@ -41,6 +41,6 @@ function get_number2(){
      return a * b;
  }
  function calculator(fun){
-     fun(get_number1(), get_number2());
-     console.log(fun);
+     const results = fun(get_number1(), get_number2());
+     console.log(results);
  }

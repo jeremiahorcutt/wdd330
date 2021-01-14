@@ -16,7 +16,11 @@ let calculator = {
   alert( calculator.sum() );
   alert( calculator.mul() );
 }
-
+function call_back(){
+    calculator(add);
+    calculator(sub);
+    calculator(mul);
+}
 function get_number1(){
    let a = parseFloat(document.getElementById("number_1").value);
 }
@@ -33,8 +37,6 @@ function get_number2(){
      return a * b;
  }
  function calculator(fun){
-     fun(
-         get_number1(),
-         get_number2()
-     );
+     fun(get_number1(), get_number2());
+     console.log(fun);
  }

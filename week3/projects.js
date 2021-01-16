@@ -76,7 +76,9 @@ function get_number2(){
     col1.textContent = MOUNTAINS[i].name;
     col2.textContent = MOUNTAINS[i].height;
     col3.textContent = MOUNTAINS[i].place;
-    newtr.appendChild(col1, col2, col3);
+    newtr.appendChild(col1);
+    newtr.appendChild(col2);
+    newtr.appendChild(col3);
     tr1.appendChild(newtr);
   };
   let print = document.getElementById('mountains');

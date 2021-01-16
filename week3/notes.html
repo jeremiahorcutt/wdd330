@@ -10,6 +10,96 @@
   <header><h1>Notes</h1></hq></header>
   <main>
     <p>
+      -------------------------------------<br>
+Object method: this<br>
+A function that is a property of an object is called its method.<br>
+“this” is a placeholder for the object within a function.<br>
+
+let user = {<br>
+  name: "John",<br>
+  age: 30,<br>
+  sayHi() {<br>
+    alert(this.name);<br>
+  }<br>
+};<br>
+user.sayHi(); // John<br>
+
+“this” is not bound. It can be used in any function<br>
+its value is evaluated at call-time and does not depend on where<br> the method was declared, but rather on what object is “before the dot”<br>
+methods are functions that are associated within an object.<br>
+-------------------------------------------------------------------<br>
+Chapter 5<br>
+Object Literals<br>
+An object in JavaScript is a self-contained set of related values and functions<br>
+const superman = {<br>
+    name: 'Superman',<br>
+    'real name': 'Clark Kent',<br>
+    height: 75,<br>
+    weight: 235,<br>
+    hero: true,<br>
+    villain: false,<br>
+    allies: ['Batman','Supergirl','Superboy'],<br>
+    fly() {<br>
+        return 'Up, up and away!';<br>
+    }<br>
+};<br>
+An object is a grouping of information and/or functions that are relevant together.<br>
+To create an object, use curly brackets {}.<br>
+You can access an object’s properties by using dot notation or bracket notation<br>
+You can call a method (function within an object) by using dot or bracket notation<br>
+Superman.fly()<br>
+Superman[‘fly’]()<br>
+Looping through the properties of an object<br>
+for(const key in superman) {<br>
+    console.log(key + ": " + superman[key]);<br>
+}<br>
+Adding properties to an object<br>
+Superman.city=”Metropolis”<br>
+
+Removing Properties from an object<br>
+Delete superman.city<br>
+Accessing nested objects<br>
+Jla.aquaman.realName<br>
+An object literal can be passed as a parameter to a function. This is useful when there<br> are a large number of parameters, as it allows the arguments to be provided by name and in any order. This means you don't have to remember the order to enter them when invoking a function.<br>
+----------------------------------------------------------------------------<br>
+Chap 6: Document Object Model<br>
+DOM = Acronym for Document Object Model- represents an HTML document as a network of connected nodes that form a tree-like structure<br>
+const listItems = document.getElementsByTagName('li'); -will allow you to get a tag by the tag itself rather than an id.<br>
+const heroes = document.getElementsByClassName('hero');- you can access elements by their class name<br>
+example.firstChild -returns first child of node (if the parent was a ul, it would be the first in the list)<br>
+example.lastChild -returns last child of node<br>
+example.nextSibling -returns the next adjacent sibling node (if the node was an li, it would return the next on the list)<br>
+example.previousSibling -returns the last adjacent sibling node<br>
+example.parentNode -returns the parent node of the queried node<br>
+example.nodeValue – returns the text inside the node<br>
+example.className can be used to change the class of an element (only use if element has 1 class)<br>
+example.classList can be used to add or remove class names to an element (for when there are more than 1 class)<br>
+example.classList.contains checks to see if element has a particular class<br>
+example.removeChild can be used to remove an element from a page<br>
+example.replaceChild can be used to replace an element on a page<br>
+The node lists returned by the document.getElementsByClassName() and document.getElementsByTagName() methods arelivecollections<br> that will update to reflect any changes on the page<br>
+Any CSS property names that are separated by dashes must be written in camelCase notation, so the dash is removed and the next<br> letter is capitalized because dashes are not legal characters in property names<br>
+getComputedStyle(example) will return the css styles associated with the object<br>
+_____________________________________________________<br>
+Chapter 7 Events<br>
+The recommended way of dealing with events, and the current standard, is to use event listeners.
+The screenX and screenY properties show the number of pixels from the left and top of the screen respectively where the event took place.<br>
+
+The clientX and clientY properties show the number of pixels from the left and top of the client that is being used (usually the browser window).<br>
+
+The pageX and pageY properties show the number of pixels from the left and top, respectively, where the event took place in the document.<br> This property takes account of whether the page has been scrolled<br>
+List of types of events at: https://developer.mozilla.org/en-US/docs/Web/Events<br>
+Mouse events<br>
+Click, mouseup, mousedown, dblclick, mouseover, mouseout, mousemove<br>
+(be cautious of using click and dblclick on the same element since the click event will be triggered even if you double click it)<br>
+Keyboard events<br>
+Keydown (act of pusing a key down), keypress (physical character showing up on the screen), keyup<br>
+Touch events<br>
+Touchstart, touchend, touchmove, touchenter, touchleave, touchcancel<br>
+Bubbling is when the event fires on the element clicked on first, then bubbles up the document tree, firing an event on<br> each parent element until it reaches the root node.<br>
+The bubble phase can be stopped from occurring by adding the event.stopPropagation() method into the callback function.<br>
+Capturing starts by firing an event on the root element, then propagates downwards, firing an event on each child element<br> until it reaches the target element that was clicked on.<br>
+
         </p>
   </main>
 </body>

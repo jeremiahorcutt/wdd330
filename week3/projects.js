@@ -65,7 +65,9 @@ function get_number2(){
   thheight.textContent = 'height';
   thplace.textContent = 'place';
   table.appendChild(tr1);
-  tr1.appendChild(thname, thheight, thplace);
+  tr1.appendChild(thname);
+  tr1.appendChild(thheight);
+  tr1.appendChild(thplace);
   for(let i = 0; i < MOUNTAINS.length; i++){
     let newtr = document.createElement('tr');
     let col1 = document.createElement('td');

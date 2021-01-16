@@ -79,7 +79,7 @@ function get_number2(){
     newtr.appendChild(col1);
     newtr.appendChild(col2);
     newtr.appendChild(col3);
-    tr1.appendChild(newtr);
+    table.appendChild(newtr);
   };
   let print = document.getElementById('mountains');
   print.appendChild(table);

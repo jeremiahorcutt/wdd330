@@ -46,6 +46,7 @@ function get_number2(){
  }
 
  //14.1 Build a Table
+ function tablebuilder(){
  const MOUNTAINS = [
     {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
     {name: "Everest", height: 8848, place: "Nepal"},
@@ -55,3 +56,27 @@ function get_number2(){
     {name: "Popocatepetl", height: 5465, place: "Mexico"},
     {name: "Mont Blanc", height: 4808, place: "Italy/France"}
   ];
+  let table = document.createElement('table');
+  let tr1 = document.createElement('tr');
+  let thname = document.createElement('th');
+  let thheight = document.createElement('th');
+  let thplace = document.createElement('th');
+  thname.textContent = 'name';
+  thheight.textContent = 'height';
+  thplace.textContent = 'place';
+  table.appendChild(tr1);
+  tr1.appendChild(thname, thheight, thplace);
+  for(let i = 0; i < MOUNTAINS.length; i++){
+    let newtr = document.createElement('tr');
+    let col1 = document.createElement('td');
+    let col2 = document.createElement('td');
+    let col3 = document.createElement('td');
+    col1.textContent = MOUNTAINS[i].name;
+    col2.textContent = MOUNTAINS[i].height;
+    col3.textContent = MOUNTAINS[i].place;
+    newtr.appendChild(col1, col2, col3);
+    tr1.appendChild(newtr);
+  };
+  let print = document.getElementById('mountains');
+  print.appendChild(table);
+ };

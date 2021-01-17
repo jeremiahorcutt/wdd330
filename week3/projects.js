@@ -90,9 +90,8 @@ window.addEventListener("keydown", event => {
         var counter = 50;
         let newcounter = counter + (counter * .1);
         document.getElementById('balloon').style.fontSize = newcounter + "px";
-    }else(event.key == "ArrowDown") {
+    }else if(event.key == "ArrowDown"){
         let newcounter = counter - (counter * .1);
         document.getElementById('balloon').style.fontSize = newcounter + "px";
-
     }
 })

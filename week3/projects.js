@@ -89,6 +89,6 @@ window.addEventListener("keydown", event => {
     if (event.key == "ArrowUp") {
         let counter = 50;
         let newcounter = counter + (counter * .1);
-        document.getElementById('balloon').style.font-size = newcounter + "px";
+        document.getElementById('balloon').style.fontSize = newcounter + "px";
     }
 })

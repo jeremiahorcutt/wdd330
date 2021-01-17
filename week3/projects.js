@@ -87,8 +87,12 @@ function get_number2(){
  
 window.addEventListener("keypress", event => {
     if (event.key == "ArrowUp") {
-        let counter = 50;
+        var counter = 50;
         let newcounter = counter + (counter * .1);
         document.getElementById('balloon').style.fontSize = newcounter + "px";
+    }else(event.key == "ArrowDown") {
+        let newcounter = counter - (counter * .1);
+        document.getElementById('balloon').style.fontSize = newcounter + "px";
+
     }
 })

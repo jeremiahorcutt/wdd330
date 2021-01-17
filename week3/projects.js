@@ -85,3 +85,10 @@ function get_number2(){
   print.appendChild(table);
  };
  
+window.addEventListener("keydown", event => {
+    if (event.key == "ArrowUp") {
+        let counter = 10;
+        let newcounter = counter + (counter * .1);
+        document.getElementById('balloon').style.font-size = newcounter + "px";
+    }
+})

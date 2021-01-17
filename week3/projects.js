@@ -84,3 +84,4 @@ function get_number2(){
   let print = document.getElementById('mountains');
   print.appendChild(table);
  };
+ 

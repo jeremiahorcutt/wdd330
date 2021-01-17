@@ -85,7 +85,7 @@ function get_number2(){
   print.appendChild(table);
  };
  
-window.addEventListener("keypress", event => {
+window.addEventListener("keydown", event => {
     if (event.key == "ArrowUp") {
         var counter = 50;
         let newcounter = counter + (counter * .1);

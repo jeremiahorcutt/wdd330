@@ -86,7 +86,7 @@ function get_number2(){
  };
  
  let balloon = document.getElementById("balloon");
- let size;
+ let size = 20;
  function setSize(newSize) {
    size = newSize;
    balloon.style.fontSize = size + "px";

@@ -85,26 +85,26 @@ function get_number2(){
   print.appendChild(table);
  };
  
- let b = document.querySelector("span");
- let size;
- function setSize(newSize) {
-   size = newSize;
-   b.style.fontSize = size + "px";
- }
- setSize(20);
+ let p = document.querySelector("p");
+  let size;
+  function setSize(newSize) {
+    size = newSize;
+    p.style.fontSize = size + "px";
+  }
+  setSize(20);
 
- function handleArrow(event) {
-   if (event.key == "ArrowUp") {
-     if (size > 70) {
-       b.textContent = "💥";
-       document.body.removeEventListener("keydown", handleArrow);
-     } else {
-       setSize(size * 1.1);
-       event.preventDefault();
-     }
-   } else if (event.key == "ArrowDown") {
-     setSize(size * 0.9);
-     event.preventDefault();
-   }
- }
- document.body.addEventListener("keydown", handleArrow);
+  function handleArrow(event) {
+    if (event.key == "ArrowUp") {
+      if (size > 30) {
+        p.textContent = "💥";
+        document.body.removeEventListener("keydown", handleArrow);
+      } else {
+        setSize(size * 1.1);
+        event.preventDefault();
+      }
+    } else if (event.key == "ArrowDown") {
+      setSize(size * 0.9);
+      event.preventDefault();
+    }
+  }
+  document.body.addEventListener("keydown", handleArrow);

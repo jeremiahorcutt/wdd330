@@ -85,7 +85,7 @@ function get_number2(){
   print.appendChild(table);
  };
  
- let p = document.querySelector("p");
+ let p = document.querySelector("span");
   let size;
   function setSize(newSize) {
     size = newSize;

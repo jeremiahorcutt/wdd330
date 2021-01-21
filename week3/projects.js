@@ -135,15 +135,24 @@ function get_number2(){
                return true;
            }
        })
+       console.log(twenty);
       // Array.prototype.every() // is everyone 19 or older?
-  
+      const atLeastOne = people.some(function(age){
+          if(2020 - age.year >= 19){
+              return true;
+          }
+      })
+      console.log(atLeastOne);
+
       // Array.prototype.find()
       // Find is like filter, but instead returns just the one you are looking for
-
       // find the comment with the ID of 823423
+      const comment = comments.find(com => com.id === 823423);
+      console.log(comment);
   
       // Array.prototype.findIndex()
       // Find the comment with this ID
-
+      const index = comments.findIndex(com => com.id === 823423);
+      console.log(index);
       // delete the comment with the ID of 823423
-  
+      comments.splice(index, 1);

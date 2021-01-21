@@ -85,8 +85,8 @@ function get_number2(){
   print.appendChild(table);
  };
  
- let balloon = document.getElementById("balloon");
- let size = 20;
+ let balloon = document.querySelector("span");
+ let size;
  function setSize(newSize) {
    size = newSize;
    balloon.style.fontSize = size + "px";

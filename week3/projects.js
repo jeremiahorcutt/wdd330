@@ -88,6 +88,7 @@ function get_number2(){
 window.addEventListener("keydown", event => {
     if (event.key == "ArrowUp") {
         let counter = document.getElementById('balloon').style.fontSize;
+        console.log(counter);
         let newcounter = counter + (counter * .1);
         document.getElementById('balloon').style.fontSize = newcounter + "px";
     }

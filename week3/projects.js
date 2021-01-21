@@ -85,18 +85,18 @@ function get_number2(){
   print.appendChild(table);
  };
  
- let balloon = document.querySelector("span");
+ let b = document.querySelector("span");
  let size;
  function setSize(newSize) {
    size = newSize;
-   balloon.style.fontSize = size + "px";
+   b.style.fontSize = size + "px";
  }
  setSize(20);
 
  function handleArrow(event) {
    if (event.key == "ArrowUp") {
      if (size > 70) {
-       balloon.textContent = "💥";
+       b.textContent = "💥";
        document.body.removeEventListener("keydown", handleArrow);
      } else {
        setSize(size * 1.1);

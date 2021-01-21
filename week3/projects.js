@@ -130,7 +130,11 @@ function get_number2(){
   
       // Some and Every Checks
       // Array.prototype.some() // is at least one person 19 or older?
-
+       const twenty = people.some(function(age){
+           if(2020 - age.year >= 19){
+               return true;
+           }
+       })
       // Array.prototype.every() // is everyone 19 or older?
   
       // Array.prototype.find()
@@ -140,6 +144,6 @@ function get_number2(){
   
       // Array.prototype.findIndex()
       // Find the comment with this ID
-      
+
       // delete the comment with the ID of 823423
   

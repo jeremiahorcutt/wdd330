@@ -8,7 +8,96 @@
   <body>
   <header><h1>Notes</h1></hq></header>
   <main>
+<p>
+  ________________________________________
+  Arrow functions
+  Main differences to a standard function
+  Does not have its own bindings to this or super, and should not be used as methods.
+  Does not have arguments, or new.target keywords.
+  Not suitable for call, apply and bind methods, which generally rely on establishing a scope.
+  Cannot be used as constructors.
+  Cannot use yield, within its body.
+  // Traditional Function
+  function (a){
+    return a + 100;
+  }
+  // Arrow Function Break Down
+  // 1. Remove the word "function" and place arrow between the argument and opening body bracket
+  (a) => {
+    return a + 100;
+  }
+  // 2. Remove the body brackets and word "return" -- the return is implied.
+  (a) => a + 100;
+  // 3. Remove the argument parentheses
+  a => a + 100;
+  _________________________________________
+  Chapter 8: Forms
+  The action attribute of a form tag is the URL where the form will be submitted to
+  Document.forms returns an HTML collection of all the forms in the document in the order they appear in the markup
+  const form = document.forms[0]; is the same as
+   const form = document.getElementsByTagname('form')[0];
+  A form object also has a method called elements that returns an HTML collection of all the elements contained in the form
+  The form.submit() method will submit the form automatically. Note that submitting a form using this method won’t trigger the form submit event
+  The form.reset() method will reset all the form controls back to their initial values specified in the HTML
+  <button type='reset'>Reset</button> will achieve the same thing as form.reset() but it is considered poor usability since it can’t accidently be clicked
+  The form.action property can be used to set the action attribute of a form, so it’s sent to a different URL to be processed on the server
+  FORM EVENTS:
+  Focus- event occurs when an element is focused on
+  Blur- event occurs when the user moves the focus away from the form element.
+  Change- event occurs when the user moves the focus away from the form element after changing it
+  Submit- event occurs when the form is submitted
+  
+  You can actually stop the form from being submitted to that URL altogether by using the preventDefault() method
+  FORM VALIDATION
+  A submit button can be disable by added the disabled attribute to the <input> element: - this will stop a form from being submitted if there are any errors. IF using this method, you need to change the attribute via js
+  function disableSubmit(event) {
+      if(event.target.value === ''){
+          document.getElementById('submit').disabled = true;
+      } else {
+          document.getElementById('submit').disabled = false;
+      }
+  preventDefault() can also be used to stop a form from submitting.
+  In a real application, you might end up having to validate many different elements according to various different rules. If this is the case, it would make sense to write some more generic addError() and removeError() functions to deal with the different types of validation you might want to apply to the various elements in a form- for vanilla JS
+  __________________________________________________________
+  Chapter 12 – OOP in JS
+  Encapsulation-  the inner workings are kept hidden inside the object and only the essential functionalities are exposed to the end user
+  Polymorphism- the same process can be used for different objects
+  Inheritance- taking the features of one object then adding some new features
+  Constructor function-
+  Pascal Notation (first letter of every word is uppercased)
+  Function Circle(){
+  this.radius = radius;
+  this.draw = function(){
+  console.log(‘draw’);
+  }
+  objects have a constructor property that returns the constructor function that created it
+  static methods cannot be called in instances of the object
+  
+  
+  
+  _________________________________________________________
+  Libraries
+  A JavaScript library is a piece of code that provides several methods that make it easier to achieve common task
+  A disadvantage to a library is that it may cause performance issues.
+  Modules
+  A module is a self-contained piece of code that provides functions and methods that can then be used in other files and by other modules
+  Coupling refers to how co-dependent two pieces of code are. Loose coupling is generally better since it makes overall modification easier
+  All code in modules is always in strict mode without the need for 'use strict' and there is no way to opt out of this.
+  A module has its own global scope, so any variables created in the top-level of a module can only be accessed within that module.
+  The value of this in the top level of a module is undefined, rather than the global object.
+  You can't use HTML-style comments in modules 
+  You can import functions from one file to another
+  File a:
+  Export {
+   function
+  }
+  File b:
+  import  { function } from '.fileA.js';
+  Default exportsrefer toa singlevariable, function or class in a module that can be imported without having to be explicitly named
+  Having more than one default export will result in a syntax error.
+  
 
+</p>
 
   </main>
 </body>

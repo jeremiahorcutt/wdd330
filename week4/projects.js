@@ -53,4 +53,13 @@ class Group {
   console.log(group.has(10));
   
 
-   
+  document.getElementById("submit").onclick = adlib();
+
+  function adlib(){
+      document.getElementById('ad').style.display = "block";
+      let noun1 = document.getElementById().value;
+      let noun2 = document.getElementById().value;
+      let noun3 = document.getElementById().value;
+      let noun4 = document.getElementById().value;
+      let adj = document.getElementById().value;
+  }

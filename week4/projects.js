@@ -53,19 +53,17 @@ class Group {
   console.log(group.has(10));
   
 
-  document.getElementById("submit").onclick = adlib();
-
   function adlib(){
       document.getElementById('ad').style.display = "block";
-      let noun1 = document.getElementById().value;
-      document.getElementByID("noun1").innerHTML = noun1;
+      let noun1 = document.getElementById("noun1").value;
+      document.getElementByID("in1").innerHTML = noun1;
       let noun2 = document.getElementById().value;
       
 
-      let noun3 = document.getElementById().value;
-      document.getElementByID("noun3").innerHTML = noun3;
-      let noun4 = document.getElementById().value;
-      document.getElementByID("noun4").innerHTML = noun4;
-      let adj = document.getElementById().value;
+      let noun3 = document.getElementById("noun3").value;
+      document.getElementByID("in3").innerHTML = noun3;
+      let noun4 = document.getElementById("noun4").value;
+      document.getElementByID("in4").innerHTML = noun4;
+      let adj = document.getElementById("adj").value;
       document.getElementByID("adj").innerHTML = adj;
   }

@@ -57,7 +57,7 @@ class Group {
       document.getElementById('ad').style.display = "block";
       let noun1 = document.getElementById("noun1").value;
       document.getElementById("in1").innerHTML = noun1;
-      document.querySelector('input[name="plural"]:checked').value;
+     let noun2 = document.querySelector('input[name="plural"]:checked').value;
       document.getElementById("in2").innerHTML = noun2;
       let noun3 = document.getElementById("noun3").value;
       document.getElementById("in3").innerHTML = noun3;

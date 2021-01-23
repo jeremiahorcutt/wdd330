@@ -34,9 +34,9 @@ class Group {
     has(num){
         this.groupies.includes(num);
     }
-    static from(group){
+    static from(member){
         let newgroup = new Group;
-        for (let num of group){
+        for (let num of member){
             newgroup.add(num);
         }
         return newgroup;

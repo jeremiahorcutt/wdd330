@@ -11,11 +11,42 @@
   <h1>Forms/Libraries: Ad-Lib</h1>
   <form>
    <label>Noun:<input type="text" id="noun1"></label>
-   <label><input type="radio" id="noun2"></label>
-   <label><input type="text" id="noun3"></label>
-   <label><input type="text" id="place"></label>
-   <label><input type="text" id="adj"></label>
-   <label><input type="text" id="noun4"></label>
+
+   <div id="noun2">
+    <p>Plural Noun:
+      <input type="radio" id="dogs" name="plural" value="dogs">
+      <label for="dogs">dogs</label>
+      <input type="radio" id="cats" name="plural" value="cats">
+      <label for="cats">cats</label>
+      <input type="radio" id="dinosaurs" name="plural" value="dinosaurs">
+      <label for="dinosaurs">dinosaurs</label>
+   </p>
+  </div>
+
+   <label>Noun:<input type="text" id="noun3"></label>
+
+   <label for="place">Select Place:
+    <select id="place">
+        <option disabled selected>Select Place:</option>
+        <option value="mars">Mars</option>
+        <option value="india">India</option>
+        <option value="mall">the mall</option>
+    </select></label>
+
+   <label>Adjective:<input type="text" id="adj"></label>
+
+   <label>Noun:<input type="text" id="noun4"></label>
+
+   <input type="button" value="Submit">
+
+   <p id="ad">
+    Be kind to your <span id="in1"></span> -footed <span id="in2"></span><br>
+    For a duck may be somebody's <span id="in3"></span>,<br>
+    Be kind to your <span id="in2"></span> in <span id="in4"></span><br>
+    Where the weather is always <span id="in5"></span>.<br>
+    You may think that this is the <span id="in6"></span>,<br>
+    Well it is.
+   </p>
 
 
 

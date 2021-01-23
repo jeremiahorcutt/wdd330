@@ -58,8 +58,14 @@ class Group {
   function adlib(){
       document.getElementById('ad').style.display = "block";
       let noun1 = document.getElementById().value;
+      document.getElementByID("noun1").innerHTML = noun1;
       let noun2 = document.getElementById().value;
+      
+
       let noun3 = document.getElementById().value;
+      document.getElementByID("noun3").innerHTML = noun3;
       let noun4 = document.getElementById().value;
+      document.getElementByID("noun4").innerHTML = noun4;
       let adj = document.getElementById().value;
+      document.getElementByID("adj").innerHTML = adj;
   }

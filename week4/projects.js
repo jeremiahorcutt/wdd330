@@ -57,13 +57,14 @@ class Group {
       document.getElementById('ad').style.display = "block";
       let noun1 = document.getElementById("noun1").value;
       document.getElementByID("in1").innerHTML = noun1;
-      let noun2 = document.getElementById().value;
-      
-
+      let noun2 = findSelection("plural");
+      document.getElementById("in2").innerHTML = noun2;
       let noun3 = document.getElementById("noun3").value;
       document.getElementByID("in3").innerHTML = noun3;
       let noun4 = document.getElementById("noun4").value;
-      document.getElementByID("in4").innerHTML = noun4;
+      document.getElementByID("in6").innerHTML = noun4;
       let adj = document.getElementById("adj").value;
-      document.getElementByID("adj").innerHTML = adj;
+      document.getElementByID("in5").innerHTML = adj;
+      let place = document.getElementById("place").value;
+      document.getElementById("in4").innerHTML = place;
   }

@@ -56,15 +56,15 @@ class Group {
   function adlib(){
       document.getElementById('ad').style.display = "block";
       let noun1 = document.getElementById("noun1").value;
-      document.getElementByID("in1").innerHTML = noun1;
+      document.getElementById("in1").innerHTML = noun1;
       let noun2 = findSelection("plural");
       document.getElementById("in2").innerHTML = noun2;
       let noun3 = document.getElementById("noun3").value;
-      document.getElementByID("in3").innerHTML = noun3;
+      document.getElementById("in3").innerHTML = noun3;
       let noun4 = document.getElementById("noun4").value;
-      document.getElementByID("in6").innerHTML = noun4;
+      document.getElementById("in6").innerHTML = noun4;
       let adj = document.getElementById("adj").value;
-      document.getElementByID("in5").innerHTML = adj;
+      document.getElementById("in5").innerHTML = adj;
       let place = document.getElementById("place").value;
       document.getElementById("in4").innerHTML = place;
   }

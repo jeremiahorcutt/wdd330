@@ -52,6 +52,30 @@ class Group {
   group.delete(10);
   console.log(group.has(10));
   
+  $(document).ready(function() {
+    $("#basic-form").validate({
+    rules: {
+    noun1 : {
+    required: true,
+    },
+    plural: {
+    required: true,
+    },
+    noun3: {
+    required: true,
+    },
+    place: {
+    required: ture
+    },
+    noun4:{
+    required: true
+    },
+    adj: {
+    required: true
+    }
+    }
+    });
+    });
 
   function adlib(){
       document.getElementById('ad').style.display = "block";

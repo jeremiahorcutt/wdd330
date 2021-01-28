@@ -22,8 +22,8 @@
   <h1>OOP: Vector Type (Console)</h1>
   <h1>OOP: Groups (Console)</h1>
   <h1>Forms/Libraries: Ad-Lib</h1>
-  <form style="display:flex; flex-direction: column;">
-   <label>Noun:<input type="text" id="noun1"></label>
+  <form style="display:flex; flex-direction: column;" id="basic-form" action="" method="post">
+   <label>Noun:<input type="text" id="noun1" name="noun2"></label>
 
    <div id="noun2">
     <p>Plural Noun:
@@ -36,19 +36,19 @@
    </p>
   </div>
 
-   <label>Noun:<input type="text" id="noun3"></label>
+   <label>Noun:<input type="text" id="noun3" name="noun3"></label>
 
    <label for="place">Select Place:
-    <select id="place">
+    <select id="place" name="place">
         <option disabled selected>Select Place:</option>
         <option value="Mars">Mars</option>
         <option value="India">India</option>
         <option value="the mall">the mall</option>
     </select></label>
 
-   <label>Adjective:<input type="text" id="adj"></label>
+   <label>Adjective:<input type="text" id="adj" name="adj"></label>
 
-   <label>Noun:<input type="text" id="noun4"></label>
+   <label>Noun:<input type="text" id="noun4" name="noun4"></label>
 
    <input type="button" value="Submit" style="max-width:100px;" onclick="adlib();">
 
@@ -65,5 +65,7 @@
 
   </form>
       <script src="projects.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
     </body>
  </html>

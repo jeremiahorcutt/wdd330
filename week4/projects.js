@@ -114,3 +114,11 @@ class Group {
       let place = document.getElementById("place").value;
       document.getElementById("in4").innerHTML = place;
   }
+  var err = getElementsByClassName("error fail-alert");
+  function valid(){
+      if(err == ""){
+       adlib();
+      }else{
+
+      }
+  };

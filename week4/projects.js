@@ -51,7 +51,7 @@ class Group {
   group.add(10);
   group.delete(10);
   console.log(group.has(10));
-  
+  //jquery validation
   $(document).ready(function() {
     $("#basic-form").validate({
     errorClass: "error fail-alert",
@@ -98,7 +98,7 @@ class Group {
       }
     });
     });
-
+  //function for creating adlib
   function adlib(){
       document.getElementById('ad').style.display = "block";
       let noun1 = document.getElementById("noun1").value;
@@ -114,6 +114,7 @@ class Group {
       let place = document.getElementById("place").value;
       document.getElementById("in4").innerHTML = place;
   }
+  //function to ensure form is correct before submission
   var err = getElementsByClassName("error fail-alert");
   function valid(){
       if(err == ""){

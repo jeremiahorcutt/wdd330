@@ -17,15 +17,8 @@
       max-width:500px; 
     }
     label.error.fail-alert {
-      border: 2px solid red;
-      border-radius: 4px;
-      line-height: 1;
-      padding: 2px 0 6px 6px;
-      background: #ffe6eb;
-    }
-    input.valid.success-alert {
-      border: 2px solid #4CAF50;
-      color: green;
+      color:red;
+      font-weight:bold;
     }
       </style>
   </head>
@@ -34,7 +27,7 @@
   <h1>OOP: Groups (Console)</h1>
   <h1>Forms/Libraries: Ad-Lib</h1>
   <form style="display:flex; flex-direction: column;" id="basic-form" action="" method="post">
-   <label>Noun:<input type="text" id="noun1" name="noun2"></label>
+   <label>Noun:<input type="text" id="noun1" name="noun2"><br></label>
 
    <div id="noun2">
     <p>Plural Noun:
@@ -47,7 +40,7 @@
    </p>
   </div>
 
-   <label>Noun:<input type="text" id="noun3" name="noun3"></label>
+   <label>Noun:<input type="text" id="noun3" name="noun3"><br></label>
 
    <label for="place">Select Place:
     <select id="place" name="place">
@@ -55,11 +48,11 @@
         <option value="Mars">Mars</option>
         <option value="India">India</option>
         <option value="the mall">the mall</option>
-    </select></label>
+    </select><br></label>
 
-   <label>Adjective:<input type="text" id="adj" name="adj"></label>
+   <label>Adjective:<input type="text" id="adj" name="adj"><br></label>
 
-   <label>Noun:<input type="text" id="noun4" name="noun4"></label>
+   <label>Noun:<input type="text" id="noun4" name="noun4"><br></label>
 
    <input type="submit" value="Submit" style="max-width:100px; margin-bottom:0px;" onclick="adlib();">
    <input type="reset" value="Reset" style="max-width:100px; margin-top:5px;">

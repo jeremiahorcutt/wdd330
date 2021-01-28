@@ -54,6 +54,8 @@ class Group {
   
   $(document).ready(function() {
     $("#basic-form").validate({
+    errorClass: "error fail-alert",
+    validClass: "valid success-alert",
     rules: {
     noun1 : {
     required: true,
@@ -73,7 +75,28 @@ class Group {
     adj: {
     required: true
     }
-    }
+    },
+    messages : {
+        noun1: {
+          required: "Please enter the first noun"
+        },
+        plural: {
+          required: "Please select one",
+        },
+        noun3: {
+          required: "Please enter the third noun"
+        },
+        place: {
+            required: "Please select a place"
+          },
+        noun4: {
+            required: "Please enter the fourth noun"
+          },
+        adj: {
+            required: "Please enter an adjective"
+          }
+      }
+
     });
     });
 

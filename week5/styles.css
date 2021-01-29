@@ -21,8 +21,9 @@ body {
   #display_footer_div{
       display:flex;
       flex-direction:row;
+      max-height:30px;
   }
-  
+
   #item{
     border: none;
     display: block;

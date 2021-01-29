@@ -105,8 +105,4 @@ body {
     font-size: 20px;
   }
   
-  ul li:hover {
-    text-decoration: line-through;
-    cursor: pointer;
-  }
   

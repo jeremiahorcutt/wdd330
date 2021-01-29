@@ -29,7 +29,10 @@ body {
       flex-direction:row;
       max-height:30px;
   }
-
+  #display_footer_div input, #counter_p{
+      margin-left:15px;
+      margin-right:15px;
+  }
   #item{
     border: none;
     display: block;

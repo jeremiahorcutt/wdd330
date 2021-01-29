@@ -35,6 +35,12 @@ body {
       margin-left:15px;
       margin-right:15px;
   }
+  #display_footer_div input{
+      font-weight:bold;
+      background-color:#d3d1d1;
+      text-decoration:underline;
+      border:none;
+  }
   #item{
     border: none;
     display: block;
@@ -54,7 +60,7 @@ body {
     border: none;
     font-size: 23px;
   }
-  #item:focus, #add_btn{
+  #item:focus, #add_btn, #display_footer_div input{
       outline:none;
   }
   h1{

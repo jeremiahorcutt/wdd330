@@ -10,6 +10,8 @@ body {
     }
   
   #list_div{
+    color:#f8f1f1;
+    background-color:#db6400;
     max-width: 450px;
     margin:0 auto;
     margin-top: 40px;

@@ -64,7 +64,8 @@ class Group {
       required: true
       },
       email: {
-      required: true
+      required: true,
+      email: true
       },
       color: {
       required: true
@@ -82,7 +83,7 @@ class Group {
         },
         email: {
             required: "Please enter your email",
-            email: true
+            email: "must be in email format"
           }
       }
     });

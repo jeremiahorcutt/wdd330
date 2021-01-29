@@ -86,6 +86,7 @@ body {
     padding: 8px 0;
     color:black;
     border-bottom: 1px #ffb958 solid;
+    font-size: 18px;
   }
   .remove{
       background-color:#d3d1d1;
@@ -94,6 +95,8 @@ body {
       right:0;
       border:none;
       margin-right: 10px;
+      padding: 5px 0;
+      margin-top: 0;
   }
   .remove:focus{
       outline: none;

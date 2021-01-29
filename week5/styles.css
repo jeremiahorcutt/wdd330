@@ -87,7 +87,18 @@ body {
     color:black;
     border-bottom: 1px #ffb958 solid;
   }
-  
+  .remove{
+      background-color:#d3d1d1;
+      font-weight:bold;
+      position:absolute;
+      right:0;
+  }
+  .remove:focus{
+      outline: none;
+  }
+  .remove:active{
+      color:#db6400;
+  }
   ul li:before {
     padding: 10px 10px;
     font-size: 20px;

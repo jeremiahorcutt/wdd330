@@ -7,7 +7,7 @@
     form.addEventListener('submit',function(e){
       e.preventDefault();
       list.innerHTML += '<li>' + item.value + '</li>';
-      store();
+      save();
       item.value = "";
     },false)
     
@@ -18,7 +18,7 @@
       } else {
         t.classList.add('checked');
       }
-      store();
+      save();
     },false)
     
     function save() {

@@ -115,7 +115,7 @@ class Group {
       document.getElementById("in4").innerHTML = place;
   }
   //function to ensure form is correct before submission
-  var err = getElementsByClassName("error fail-alert");
+  var err = document.getElementsByClassName("error fail-alert");
   function valid(){
       if(err == ""){
        adlib();

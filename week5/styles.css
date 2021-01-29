@@ -24,6 +24,7 @@ body {
       border:2px solid #db6400;
   }
   #display_footer_div{
+      color:black;
       display:flex;
       flex-direction:row;
       max-height:30px;

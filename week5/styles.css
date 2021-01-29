@@ -1,5 +1,4 @@
 body {
-
   }
   
   button {
@@ -10,7 +9,7 @@ body {
   
     }
   
-  .container {
+  #list_div{
     max-width: 450px;
     width: 100%;
     display: table;

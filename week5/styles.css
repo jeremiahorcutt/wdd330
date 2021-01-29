@@ -8,7 +8,6 @@ body {
     padding: 10px 20px;
   
     }
-  
   #list_div{
     color:#f8f1f1;
     background-color:#ffb958;
@@ -18,6 +17,10 @@ body {
     min-height:700px;
     position:relative;
     border: lightgrey solid 2px;
+  }
+  #display_footer_div{
+      display:flex;
+      flex-direction:row;
   }
   
   #item{

@@ -28,6 +28,8 @@ body {
       display:flex;
       flex-direction:row;
       max-height:30px;
+      justify-content: center;
+      align-items:center;
   }
   #display_footer_div input, #counter_p{
       margin-left:15px;

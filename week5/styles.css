@@ -109,11 +109,3 @@ body {
     cursor: pointer;
   }
   
-  ul li:last-child {
-    border-bottom: none;
-  }
-  
-  .button {
-    text-align: center;
-  }
-  

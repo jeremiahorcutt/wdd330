@@ -8,7 +8,7 @@
         item = document.querySelector('#item');
     
     add.addEventListener('click',function(e){
-      list.innerHTML += '<li><input type="checkbox" name="'item.value'" class="list_item"/>' + item.value + '<input type="button" name="remove" class="remove" value="X"</li>';
+      list.innerHTML += '<li><input type="checkbox" name="'+ item.value +'" class="list_item"/>' + item.value + '<input type="button" name="remove" class="remove" value="X"</li>';
       save();
       item.value = "";
     },false)

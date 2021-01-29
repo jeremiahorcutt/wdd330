@@ -9,7 +9,7 @@ body {
   
     }
   #list_div{
-    color:#f8f1f1;
+    color:#d3d1d1;
     background-color:#ffb958;
     max-width: 450px;
     margin:0 auto;
@@ -17,6 +17,11 @@ body {
     min-height:700px;
     position:relative;
     border: lightgrey solid 2px;
+  }
+  #display_div{
+      margin-top:10px;
+      background-color:#d3d1d1;
+      border:2px solid #db6400;
   }
   #display_footer_div{
       display:flex;

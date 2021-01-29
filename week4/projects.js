@@ -94,8 +94,8 @@ class Group {
       let noun1 = document.getElementById("noun1").value;
       document.getElementById("in1").innerHTML = noun1;
       let noun2 = document.querySelector('input[name="plural"]:checked').value;
-      document.getElementsById("in2").innerHTML = noun2;
-      document.getElementsById("in2_1").innerHTML = noun2;
+      document.getElementById("in2").innerHTML = noun2;
+      document.getElementById("in2_1").innerHTML = noun2;
       let noun3 = document.getElementById("noun3").value;
       document.getElementById("in3").innerHTML = noun3;
       let noun4 = document.getElementById("noun4").value;

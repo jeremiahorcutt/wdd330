@@ -21,7 +21,7 @@
       store();
     },false)
     
-    function store() {
+    function save() {
       window.localStorage.myitems = list.innerHTML;
     }
     

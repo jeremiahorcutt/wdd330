@@ -39,7 +39,7 @@ body {
     border: none;
     font-size: 23px;
   }
-  #item:focus{
+  #item:focus, #add_btn{
       outline:none;
   }
   h1{

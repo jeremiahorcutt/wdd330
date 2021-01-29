@@ -39,6 +39,9 @@ body {
     border: none;
     font-size: 23px;
   }
+  #item:focus{
+      outline:none;
+  }
   h1{
     background-color:#db6400;
     text-align: center;

@@ -81,7 +81,8 @@ class Group {
           required: "Please select a color"
         },
         email: {
-            required: "Please enter your email"
+            required: "Please enter your email",
+            email: true
           }
       }
     });

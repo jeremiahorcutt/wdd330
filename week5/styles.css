@@ -1,26 +1,21 @@
 body {
-    background: #5CDB95;
     color: #EDF5E1;
-    font-family: 'Rowdies', cursive;
   }
   
   button {
     background-color: #EDF5E1;
     color: #05386B;
-    font-family: 'Rowdies', cursive;
     margin-top: 2px;
     padding: 10px 20px;
   
     }
   
   .container {
-    background: #05386B;
     max-width: 450px;
     width: 100%;
     display: table;
     margin: 0 auto;
     margin-top: 40px;
-    border: 1px solid #5CDB95;
   }
   
   input {
@@ -29,7 +24,6 @@ body {
     width: 98%;
     line-height: 1.5;
     padding: 8px 0 8px 10px;
-    border-bottom: 1px solid #F0EFEA;
     outline: 0;
   }
   
@@ -47,9 +41,7 @@ body {
   }
   
   ul li {
-    color: #EDF5E1;
     font-weight: 400;
-    border-bottom: 1px solid #cfcbcc;
     line-height: 1.5;
     padding: 8px 0;
   }

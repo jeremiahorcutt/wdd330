@@ -88,7 +88,6 @@ body {
   }
   
   ul li:before {
-    content: "\25A1";
     padding: 10px 10px;
     font-size: 20px;
   }
@@ -106,22 +105,3 @@ body {
     text-align: center;
   }
   
-  .checked {
-    color: green;
-  }
-  
-  .checked:before {
-    content: "\2713";
-    padding: 10px 10px;
-    font-size: 20px;
-  }
-  
-  .checked:hover {
-    text-decoration: none;
-  }
-  
-  .checked:hover:after {
-    content: " (remove)";
-    color: red;
-    text-align: right;
-  }

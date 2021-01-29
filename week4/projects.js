@@ -114,12 +114,4 @@ class Group {
       let place = document.getElementById("place").value;
       document.getElementById("in4").innerHTML = place;
   }
-  //function to ensure form is correct before submission
-  var err = document.getElementsByClassName("error fail-alert");
-  function valid(){
-      if(err == ""){
-       adlib();
-      }else{
-
-      }
-  };
+  

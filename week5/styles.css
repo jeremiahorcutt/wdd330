@@ -60,8 +60,11 @@ body {
     border: none;
     font-size: 23px;
   }
-  #item:focus, #add_btn, #display_footer_div input{
+  #item:focus, #add_btn:focus, #display_footer_div input:focus{
       outline:none;
+  }
+  #display_footer_div input:active, #add_btn:active{
+      color:#db6400;
   }
   h1{
     background-color:#db6400;

@@ -33,6 +33,28 @@
   <h1>OOP: Groups (Console)</h1>
   <h1>Forms/Libraries/Validation: Ad-Lib</h1>
   <form style="display:flex; flex-direction: column;" id="basic-form">
+   <label>First Name<input type="text" id="fname" name="fname"><br></label>
+
+   <label>Last Name:<input type="text" id="lname" name="lname"><br></label>
+
+   <label for="color">Select Favorite Color:
+    <select id="color" name="color">
+        <option disabled selected>Select Color:</option>
+        <option value="orange">Orange</option>
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+    </select><br></label>
+
+   <label>Email:<input type="text" id="email" name="email"><br></label>
+
+
+   <input type="submit" value="Validate" style="max-width:100px; margin-bottom:0px;">
+   <input type="reset" value="Reset" style="max-width:100px; margin-top:5px;">
+
+  </form>
+
+  <h1>Forms Adlib</h1>
+  <form style="display:flex; flex-direction: column;">
    <label>Noun:<input type="text" id="noun1" name="noun1"><br></label>
 
    <div id="noun2">
@@ -72,10 +94,7 @@
     You may think that this is the <span id="in6"></span>,<br>
     Well it is.
    </p>
-
-
-
-  </form>
+   </form>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
       <script src="projects.js"></script>

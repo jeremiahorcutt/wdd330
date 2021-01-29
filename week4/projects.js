@@ -57,43 +57,31 @@ class Group {
     errorClass: "error fail-alert",
     validClass: "valid success-alert",
     rules: {
-      noun1 : {
+      fname : {
       required: true
       },
-      plural: {
+      lname: {
       required: true
       },
-      noun3: {
+      email: {
       required: true
       },
-      place: {
-      required: true
-      },
-      noun4:{
-      required: true
-      },
-      adj: {
+      color: {
       required: true
       }
       },
     messages : {
-        noun1: {
-          required: "Please enter the first noun"
+        fname: {
+          required: "Please enter your first name"
         },
-        plural: {
-          required: "Please select one"
+        lname: {
+          required: "Please enter you last name"
         },
-        noun3: {
-          required: "Please enter the third noun"
+        color: {
+          required: "Please select a color"
         },
-        place: {
-            required: "Please select a place"
-          },
-        noun4: {
-            required: "Please enter the fourth noun"
-          },
-        adj: {
-            required: "Please enter an adjective"
+        email: {
+            required: "Please enter your email"
           }
       }
     });

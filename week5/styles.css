@@ -20,7 +20,7 @@ body {
     border: lightgrey solid 2px;
   }
   
-  input {
+  #item{
     border: none;
     display: block;
     width: 98%;
@@ -28,7 +28,6 @@ body {
     padding: 8px 0 8px 10px;
     position:absolute;
     bottom:0;
-
   }
   
   h1{

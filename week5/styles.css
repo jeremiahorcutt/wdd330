@@ -82,9 +82,10 @@ body {
   }
   
   ul li {
-    font-weight: 400;
     line-height: 1.5;
     padding: 8px 0;
+    color:black;
+    border-bottom: 1px #ffb958 solid;
   }
   
   ul li:before {

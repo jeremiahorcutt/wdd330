@@ -83,7 +83,7 @@ class Group {
         },
         email: {
             required: "Please enter your email",
-            email: "must be in email format"
+            email: "Must be in email format"
           }
       }
     });

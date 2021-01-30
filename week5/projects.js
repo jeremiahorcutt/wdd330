@@ -11,14 +11,50 @@ function primitiveMultiply(a, b) {
 }
 
 function reliableMultiply(a, b) {
-  try{
-      primitiveMultiply(a, b);
-  } catch(error){
-      primitiveMultiply(a, b);
+  for (;;) {
+    try {
+      return primitiveMultiply(a, b);
+    } catch (e) {
+      if (!(e instanceof MultiplicatorUnitFailure))
+        throw e;
+    }
   }
-};
+}
 
 console.log(reliableMultiply(8, 8));
 // → 64
 
-//The Locked Box Exercise
+
+//OOP Practice
+//Object literal
+ const circle = {
+   radius: 1,
+   location:{
+     x: 1,
+     y: 2
+   },
+   draw: function(){
+     console.log('draw');
+   }
+ };
+// factory function
+function createCircle(radius){
+  return {
+    radius,
+    draw: function(){
+      console.log('draw');
+    }
+  };
+}
+
+const circle = createCircle(1);
+ circle.draw();
+
+ //Counstructor function
+ function Circle(radius){
+   this.radius = radius;
+   this.draw = function(){
+     console.log('d');
+   }
+ }
+const another = new Circle(1);

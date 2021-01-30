@@ -10,6 +10,53 @@
   <header><h1>Notes</h1></hq></header>
   <main>
     <p>
+      _________________________________________________<br>
+Chapter 10: Debugging and Troubleshooting<br>
+Errors, Exceptions, and Warnings:<br>
+System error ― there’s a problem with the system or external devices with which the program is interacting.<br>
+Programmer error ― the program contains incorrect syntax or faulty logic; it could even be as simple as a typo.<br>
+User error ― the user has entered data incorrectly, which the program is unable to handle<br>
+An exception is an error that produces a return value that can then be used by the program to deal with the error<br>
+Stack Trace is a sequence of functions or methods that lead to the point where the error occurred<br>
+A warning can occur if there’s an error in the code that isn't enough to cause the program to crash<br>
+Strict Mode:<br>
+Strict mode is a feature that produces more exceptions and warnings and prohibits the use of some deprecated features.<br>
+To enable strict mode, simply add:<br>
+'use strict';<br>
+You can also use strict mode on a per function basis if you add the use strict within the function rather than globally.<br>
+Modules are in strict mode by default<br>
+Linting Tools (JS Lint, JS Hint, ES Lint)<br>
+Even more ‘strict’ than strict mode. Linting tools will identify sloppy programming practices or syntax errors. Will also <br>ensure that style conventions are met.<br>
+Feature Detection:<br>
+This is to ensure that the browser being used supports any APIs that you might be using.<br>
+Debugging:<br>
+Use alert() to show dialog at certain points to verify functionality<br>
+You can also use console.log() for the same results<br>
+Use breakpoints to step through the code to watch it work (you can enter debugger; directly into the js and this will force <br>the browser to create a breakpoint at that line) REMEMBER to remove debugger; from finished project<br>
+Error() object can be used to create an error.<br>
+EvalError is not used in the current ECMAScript specification and only retained for backwards compatibility. It was used to<br> identify errors when using the global eval() function.<br>
+ RangeError is thrown when a number is outside an allowable range of values.<br>
+ ReferenceError is thrown when a reference is made to an item that doesn’t exist. For example, calling a function that hasn't been defined.<br>
+ SyntaxError is thrown when there’s an error in the code’s syntax.<br>
+ TypeError is thrown when there’s an error in the type of value used; for example, a string is used when a number is expected.<br>
+ URIError is thrown when there’s a problem encoding or decoding the URI.<br>
+ InternalError is a non-standard error that is thrown when an error occurs in the JavaScript engine. A common cause of this too much recursion.<br>
+Throwing Exceptions:<br>
+Using the throw statement you can throw your own exceptions (basically creating a system to identify your own errors)<br>
+It is best practice, however, to throw an error object. This can then be caught in a catch block<br>
+Use the try catch and finally blocks to handle excetions.<br>
+Try- will run the code inside the block as normal, but if an exception occurs it will pass the error object that is thrown onto a catch block<br>
+Catch-This will handle the error if the try block catches an exception<br>
+Finally- this will always be executed after the try and catch blocks regardless of whether they caught an exception or not<br>
+Tests- simple functions created to test other functions. This well help with debugging purposes as well<br>
+Test-driven development(TDD) is the process of writing tests before any actual code.<br>
+ 1.Write tests (that initially fail)<br>
+2.Write code to pass the tests<br>
+3.Refactor the code<br>
+4.Test refactored code<br>
+5.Write more tests for new features<br>
+You usually keep testing code in a separate file from the js code<br>
+
         </p>
   </main>
 </body>

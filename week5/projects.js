@@ -58,3 +58,71 @@ const circle = createCircle(1);
    }
  }
 const another = new Circle(1);
+
+ Circle.name;
+ Circle.length; //returns number of arguments
+ Circle.constructor;
+ const Circle1 = new Function('radius', `
+ this.radius = radius;
+ this.draw = function(){
+   console.log('d');
+ }
+ `);
+
+ const circle = new Circle1(1);
+ Circle.call({}, 1);
+ Circle.apply({}, [1]);
+
+ let x = 10;
+ let y = x;
+
+ x = 20;// y = 10
+
+ let x = {value: 10};
+ let y = x;
+
+ x.value = 20;//y = 20
+
+ let number = 10
+ function increase(number){
+   number++;
+ }
+ increase(number);
+ console.log(number);
+//returns10
+
+
+ let object = {value: 10}
+ function increase1(object){
+  object++;
+}
+
+increase1(object);
+console.log(object);
+//returns 11
+
+
+ function Circle(radius){
+  this.radius = radius;
+  this.draw = function(){
+    console.log('d');
+  }
+}
+const circle = new Circle(10);
+circle.location = { x: 1 };
+
+delete circle.location;
+
+//iterating the properties of an object
+
+function Circle(radius){
+  this.radius = radius;
+  this.draw = function(){
+    console.log('d');
+  }
+}
+const circle = new Circle(10);
+
+for(let key in circle){
+  console.log(key, circle.key);
+}

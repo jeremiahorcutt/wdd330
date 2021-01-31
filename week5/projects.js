@@ -47,7 +47,7 @@ function createCircle(radius){
   };
 }
 
-const circle = createCircle(1);
+const circle0 = createCircle(1);
  circle.draw();
 
  //Counstructor function
@@ -69,7 +69,7 @@ const another = new Circle(1);
  }
  `);
 
- const circle = new Circle1(1);
+ const circle1 = new Circle1(1);
  Circle.call({}, 1);
  Circle.apply({}, [1]);
 
@@ -102,26 +102,26 @@ console.log(object);
 //returns 11
 
 
- function Circle(radius){
+ function Circle2(radius){
   this.radius = radius;
   this.draw = function(){
     console.log('d');
   }
 }
-const circle = new Circle(10);
-circle.location = { x: 1 };
+const circle2 = new Circle2(10);
+circle2.location = { x: 1 };
 
-delete circle.location;
+delete circle2.location;
 
 //iterating the properties of an object
 
-function Circle(radius){
+function Circle3(radius){
   this.radius = radius;
   this.draw = function(){
     console.log('d');
   }
 }
-const circle = new Circle(10);
+const circle3 = new Circle3(10);
 
 for(let key in circle){
   console.log(key, circle.key);

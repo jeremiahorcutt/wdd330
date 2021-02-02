@@ -42,7 +42,7 @@ function createTodoElement(todo){
   deleteBtn.setAttribute('type', 'button');
   deleteBtn.classList.add('remove');
   deleteBtn.setAttribute('data-id', todo.id);
-  deleteBtn.innerText = "X";
+  deleteBtn.setAttribute('value', "X");
   deleteBtn.onclick = deleteTodo;
 
   li.appendChild(completeBtn);
@@ -63,3 +63,4 @@ function deleteTodo(e){
   document.querySelectory('#list').innerHTML = '';
   loadTodos();
 }
+

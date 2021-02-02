@@ -1,8 +1,4 @@
-body {
-  }
-  
   button {
-    
     color: #05386B;
     margin-top: 2px;
     padding: 10px 20px;
@@ -84,9 +80,11 @@ body {
   ul li {
     line-height: 1.5;
     padding: 8px 0;
-    color:black;
     border-bottom: 1px #ffb958 solid;
     font-size: 18px;
+  }
+  .todo-content{
+    color:black;
   }
   .remove{
       background-color:#d3d1d1;

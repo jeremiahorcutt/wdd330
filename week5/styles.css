@@ -78,6 +78,8 @@
   }
   
   ul li {
+    display:flex;
+    flex-direction:row;
     line-height: 1.5;
     padding: 8px 0;
     border-bottom: 1px #ffb958 solid;

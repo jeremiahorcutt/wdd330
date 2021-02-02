@@ -1,4 +1,4 @@
-import untilities from './untilities.js';
+import untilities from './utilities.js';
 import ls from './ls.js';
 
 document.querySelector('#add_btn').onclick = newTodo;

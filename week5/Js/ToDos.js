@@ -2,7 +2,7 @@ import utilities from './utilities.js';
 import ls from './ls.js';
 
 document.querySelector('#add_btn').onclick = newTodo;
-
+document.querySelector('complete')
 window.onload = function() {
   loadTodos();
   };
@@ -35,6 +35,7 @@ function createTodoElement(todo){
 
   const completeBtn = document.createElement('input');
   completeBtn.setAttribute('type', 'button');
+  completeBtn.setAttribute('id', todo.id + "Btn")
   completeBtn.classList.add('complete');
 
   const todoContent = document.createElement('p');

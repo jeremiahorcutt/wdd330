@@ -88,6 +88,11 @@
   .todo-content{
     color:black;
   }
+  .complete{
+    margin-left: 10px;
+    margin-right: 10px;
+    max-height: 20px;
+  }
   .remove{
       background-color:#d3d1d1;
       font-weight:bold;

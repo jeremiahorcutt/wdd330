@@ -1,29 +1,22 @@
-
-
 function taskNum(){
    
-}
+};
 
-function viewAll(){
+function hideDisplay(list){
+  list.foreach(listItem => )
+};
 
-}
-
-function viewActive(){
-    
-}
-
-function viewCompleted(){
-    
-}
+function showDisplay(list){
+  list.foreach(listItem => )
+};
 
 function completeItem(){
 
-}
+};
 
 export default{
   taskNum,
-  viewAll,
-  viewActive,
-  viewCompleted,
+  hideDisplay,
+  showDisplay,
   completeItem
 };

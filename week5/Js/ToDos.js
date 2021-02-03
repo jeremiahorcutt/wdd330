@@ -2,6 +2,7 @@ import utilities from './utilities.js';
 import ls from './ls.js';
 
 document.querySelector('#add_btn').onclick = newTodo;
+document.querySelector('#all').onclick = allView;
 
 window.onload = function() {
   loadTodos();
@@ -32,10 +33,11 @@ function createTodo() {
 
 function createTodoElement(todo){
   const li = document.createElement('li');
+  li.setAttribute('id', todo.id + 'Li')
 
   const completeBtn = document.createElement('input');
   completeBtn.setAttribute('type', 'button');
-  completeBtn.setAttribute('id', todo.id + "Btn")
+  completeBtn.setAttribute('id', todo.id + 'Btn')
   completeBtn.classList.add('complete');
 
   const todoContent = document.createElement('p');
@@ -60,11 +62,27 @@ function addToList(li){
   document.querySelector('#list').appendChild(li);
 }
 
+function allView(){
+  const completeList = loadTodos();
+  utilities.showDisplay(completeList);
+};
+
+function activeView(){
+
+};
+
+function completedView(){
+
+};
 //Event Handlers
 function deleteTodo(e){
   const btn = e.currentTarget;
   ls.deleteTodo(btn.getAttribute('data-id'));
   document.querySelector('#list').innerHTML = '';
   loadTodos();
+}
+
+function complete(e){
+
 }
 

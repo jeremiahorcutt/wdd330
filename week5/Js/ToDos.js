@@ -12,7 +12,7 @@ window.onload = function() {
 
 
 function loadTodos(){
-  const todoList =ls.getTodoList();
+  const todoList = ls.getTodoList();
   todoList.forEach(todo => {
     const el = createTodoElement(todo)
     addToList(el);
@@ -65,14 +65,14 @@ function addToList(li){
 }
 
 function allView(){
-  const list = loadTodos();
+  const list = ls.getTodoList();
   for(let i = 0; i < list.length; i++){
     utilities.showDisplay(list);
   }
 };
 
 function activeView(){
-  const list = loadTodos();
+  const list = ls.getTodoList();
   for(let i = 0; i < list.length; i++){
     if(list.completed = false){
       utilities.showDisplay(list);
@@ -84,7 +84,7 @@ function activeView(){
 };
 
 function completedView(){
-  const list = loadTodos();
+  const list = ls.getTodoList();
   for(let i = 0; i < list.length; i++){
     if(list.completed = true){
       utilities.showDisplay(list);

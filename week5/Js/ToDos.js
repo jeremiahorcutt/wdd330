@@ -3,6 +3,11 @@ import ls from './ls.js';
 
 document.querySelector('#add_btn').onclick = newTodo;
 
+window.onload = function() {
+  loadTodos();
+  };
+
+
 function loadTodos(){
   const todoList =ls.getTodoList();
 
@@ -58,7 +63,6 @@ function addToList(li){
 
 //Event Handlers
 function deleteTodo(e){
-  alert('deleted')
   const btn = e.currentTarget;
   ls.deleteTodo(btn.getAttribute('data-id'));
   document.querySelector('#list').innerHTML = '';

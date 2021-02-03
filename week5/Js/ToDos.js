@@ -5,7 +5,7 @@ document.querySelector('#add_btn').onclick = newTodo;
 document.querySelector('#all').onclick = allView;
 document.querySelector('#completed').onclick = completedView;
 document.querySelector('#active').onclick = activeView;
-
+document.querySelector('.complete').addEventListener("click", completebtn);
 
 window.onload = function() {
   loadTodos();

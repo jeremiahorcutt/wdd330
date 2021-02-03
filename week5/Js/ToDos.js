@@ -109,7 +109,7 @@ function deleteTodo(e){
   ls.deleteTodo(btn.getAttribute('data-id'));
   document.querySelector('#list').innerHTML = '';
   loadTodos();
-  let list = ls.getTodoList();
+  let list = ls.getTodoList()l;
   utilities.taskNum(list);
 }
 

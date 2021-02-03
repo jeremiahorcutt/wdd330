@@ -117,9 +117,10 @@ function completebtn(e){
   for(let i = 0; i < list.length; i++){
     if(list[i].id == lineId){
       list[i].completed = true;
+      ls.saveTodo(list[i]);
     }
   }
-  ls.saveTodo(list);
+  
   ls.loadTodos;
 }
 

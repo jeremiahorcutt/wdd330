@@ -9,7 +9,7 @@ function hideDisplay(list){
 
 function showDisplay(list){
   console.log(list);
-  document.getElementById(list).style.display = "block";
+  document.getElementById(list).style.display = "flex";
 };
 
 function completeItem(){

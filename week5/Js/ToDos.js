@@ -5,6 +5,7 @@ document.querySelector('#add_btn').onclick = newTodo;
 document.querySelector('#all').onclick = allView;
 document.querySelector('#completed').onclick = completedView;
 document.querySelector('#active').onclick = activeView;
+document.querySelector('#complete').onclick = complete;
 
 window.onload = function() {
   loadTodos();
@@ -39,7 +40,7 @@ function createTodoElement(todo){
 
   const completeBtn = document.createElement('input');
   completeBtn.setAttribute('type', 'button');
-  completeBtn.setAttribute('id', todo.id + 'Btn')
+  completeBtn.setAttribute('id', todo.id)
   completeBtn.classList.add('complete');
 
   const todoContent = document.createElement('p');
@@ -66,10 +67,8 @@ function addToList(li){
 
 function allView(){
   const list = ls.getTodoList();
-  console.log(list);
   for(let i = 0; i < list.length; i++){
     let listId = list[i].id;
-    console.log(listId);
     utilities.showDisplay(listId + "Li");
   }
 };
@@ -78,10 +77,12 @@ function activeView(){
   const list = ls.getTodoList();
   for(let i = 0; i < list.length; i++){
     if(list.completed = false){
-      utilities.showDisplay(list.id + "Li");
+      let listId = list[i].id;
+      utilities.showDisplay(listId + "Li");
     }
     else{
-      utilities.hideDisplay(list.id + "Li");
+      let listId = list[i].id;
+      utilities.hideDisplay(listId + "Li");
     }
   }
 };
@@ -90,10 +91,12 @@ function completedView(){
   const list = ls.getTodoList();
   for(let i = 0; i < list.length; i++){
     if(list.completed = true){
-      utilities.showDisplay(list.id + "Li");
+      let listId = list[i].id;
+      utilities.showDisplay(listId + "Li");
     }
     else{
-      utilities.hideDisplay(list.id + "Li");
+      let listId = list[i].id;
+      utilities.hideDisplay(listId + "Li");
     }
   }
 };
@@ -106,6 +109,13 @@ function deleteTodo(e){
 }
 
 function complete(e){
-
+  const list = ls.getTodoList();
+  const btn = e.currentTarget;
+  let lineId = utilities.completeItem(btn.getAttribute('id'));
+  for(let i = 0; i < list.length; i++){
+    if(list[0].id == lineId){
+      list[0].completed = true;
+    }
+  }
 }
 

@@ -67,9 +67,10 @@ function addToList(li){
 function allView(){
   const list = ls.getTodoList();
   console.log(list);
+  let listId = list.id;
+  console.log(listId);
   for(let i = 0; i < list.length; i++){
-     let listId = list.id;
-     console.log(listId);
+     
     utilities.showDisplay(listId + "Li");
   }
 };

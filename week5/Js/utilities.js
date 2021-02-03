@@ -3,11 +3,11 @@ function taskNum(){
 };
 
 function hideDisplay(list){
-   list.style.display = "none"
+  document.getElementById(list).style.display = "none"
 };
 
 function showDisplay(list){
-  list.style.display = "block"
+  document.getElementById(list).style.display = "block"
 };
 
 function completeItem(){

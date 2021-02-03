@@ -119,6 +119,7 @@ function complete(e){
   const btn = e.currentTarget;
   utilities.completeItem(btn.getAttribute('id'));
   let lineId = btn.getAttribute('id');
+  console.log('line id =' + lineId);
   for(let i = 0; i < list.length; i++){
     if(list[0].id == lineId){
       list[0].completed = true;

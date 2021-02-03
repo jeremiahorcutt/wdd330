@@ -76,7 +76,7 @@ function allView(){
 function activeView(){
   const list = ls.getTodoList();
   for(let i = 0; i < list.length; i++){
-    if(list.completed = false){
+    if(list.completed == false){
       let listId = list[i].id;
       utilities.showDisplay(listId + "Li");
     }
@@ -90,7 +90,7 @@ function activeView(){
 function completedView(){
   const list = ls.getTodoList();
   for(let i = 0; i < list.length; i++){
-    if(list.completed = true){
+    if(list.completed == true){
       let listId = list[i].id;
       utilities.showDisplay(listId + "Li");
     }

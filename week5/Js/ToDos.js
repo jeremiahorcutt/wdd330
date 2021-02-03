@@ -120,7 +120,6 @@ function completebtn(e){
       ls.saveTodo(list[i]);
     }
   }
-  
   ls.loadTodos;
 }
 

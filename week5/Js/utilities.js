@@ -1,7 +1,7 @@
 
 
-function taskNum(counter){
-   document.querySelector('#counter_span').textContent = counter;
+function taskNum(){
+   
 }
 
 function viewAll(){

@@ -10,13 +10,10 @@ window.onload = function() {
 
 function loadTodos(){
   const todoList =ls.getTodoList();
-  let counter = 0;
   todoList.forEach(todo => {
     const el = createTodoElement(todo)
     addToList(el);
-    counter ++;
   })
-  utilities.taskNum(counter);
 }
 
 function newTodo(){

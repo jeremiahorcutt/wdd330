@@ -67,7 +67,7 @@ function addToList(li){
 function allView(){
   const list = ls.getTodoList();
   for(let i = 0; i < list.length; i++){
-    utilities.showDisplay(list);
+    utilities.showDisplay(list.id + "Li");
   }
 };
 
@@ -75,10 +75,10 @@ function activeView(){
   const list = ls.getTodoList();
   for(let i = 0; i < list.length; i++){
     if(list.completed = false){
-      utilities.showDisplay(list);
+      utilities.showDisplay(list.id + "Li");
     }
     else{
-      utilities.hideDisplay(list);
+      utilities.hideDisplay(list.id + "Li");
     }
   }
 };
@@ -87,10 +87,10 @@ function completedView(){
   const list = ls.getTodoList();
   for(let i = 0; i < list.length; i++){
     if(list.completed = true){
-      utilities.showDisplay(list);
+      utilities.showDisplay(list.id + "Li");
     }
     else{
-      utilities.hideDisplay(list);
+      utilities.hideDisplay(list.id + "Li");
     }
   }
 };

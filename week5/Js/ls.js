@@ -7,6 +7,7 @@ function saveTodo(todo){
 
 function deleteTodo(id){
     const toDoList = getTodoList();
+    alert('deleted');
     const updatedTodos = toDoList.filter( todo => todo.id != id)
     localStorage.setItem('toDoList', JSON.stringify(updatedTodos));
 };

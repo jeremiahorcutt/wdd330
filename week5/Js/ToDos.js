@@ -116,8 +116,9 @@ function completebtn(e){
   console.log('line id =' + lineId);
   for(let i = 0; i < list.length; i++){
     if(list[i].id == lineId){
-      list[i].completed = 'true';
+      list[i].completed = true;
     }
   }
+  ls.saveTodo(list);
 }
 

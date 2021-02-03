@@ -3,11 +3,13 @@ function taskNum(){
 };
 
 function hideDisplay(list){
-  document.getElementById(list).style.display = "none"
+  console.log(list);
+  document.getElementById(list).style.display = "none";
 };
 
 function showDisplay(list){
-  document.getElementById(list).style.display = "block"
+  console.log(list);
+  document.getElementById(list).style.display = "block";
 };
 
 function completeItem(){

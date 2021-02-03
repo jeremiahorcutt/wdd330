@@ -41,7 +41,7 @@ function createTodoElement(todo){
   completeBtn.setAttribute('type', 'button');
   completeBtn.setAttribute('id', todo.id)
   completeBtn.classList.add('complete');
-  completeBtn.setAttribute('onclick', 'complete();');
+  completeBtn.setAttribute('onclick', 'completebtn();');
 
   const todoContent = document.createElement('p');
   todoContent.classList.add('todo-content');
@@ -108,7 +108,7 @@ function deleteTodo(e){
   loadTodos();
 }
 
-function complete(e){
+function completebtn(e){
   const list = ls.getTodoList();
   const btn = e.currentTarget;
   utilities.completeItem(btn.getAttribute('id'));

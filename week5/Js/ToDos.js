@@ -117,7 +117,8 @@ function deleteTodo(e){
 function complete(e){
   const list = ls.getTodoList();
   const btn = e.currentTarget;
-  let lineId = utilities.completeItem(btn.getAttribute('id'));
+  utilities.completeItem(btn.getAttribute('id'));
+  let lineId = btn.getAttribute('id');
   for(let i = 0; i < list.length; i++){
     if(list[0].id == lineId){
       list[0].completed = true;

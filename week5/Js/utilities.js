@@ -1,6 +1,6 @@
 function taskNum(list){
   let counter = 0; 
-  for(let i = 0; i < list.lenght; i++){
+  for(let i = 0; i < list.length; i++){
      counter += 1;
    }
    document.getElementById('counter_span').innerHTML = counter;

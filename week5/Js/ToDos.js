@@ -41,7 +41,7 @@ function createTodoElement(todo){
   completeBtn.setAttribute('type', 'button');
   completeBtn.setAttribute('id', todo.id)
   completeBtn.classList.add('complete');
-  completeBtn.setAttribute('onclick', complete());
+  completeBtn.setAttribute('onclick', 'complete();');
 
   const todoContent = document.createElement('p');
   todoContent.classList.add('todo-content');

@@ -3,11 +3,11 @@ function taskNum(){
 };
 
 function hideDisplay(list){
-  list.foreach(listItem => )
+   list.style.display = "none"
 };
 
 function showDisplay(list){
-  list.foreach(listItem => )
+  list.style.display = "block"
 };
 
 function completeItem(){

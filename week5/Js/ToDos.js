@@ -3,6 +3,8 @@ import ls from './ls.js';
 
 document.querySelector('#add_btn').onclick = newTodo;
 document.querySelector('#all').onclick = allView;
+document.querySelector('#completed').onclick = completedView;
+document.querySelector('#active').onclick = activeView;
 
 window.onload = function() {
   loadTodos();
@@ -63,16 +65,34 @@ function addToList(li){
 }
 
 function allView(){
-  const completeList = loadTodos();
-  utilities.showDisplay(completeList);
+  const list = loadTodos();
+  for(let i = 0; i < list.length; i++){
+    utilities.showDisplay(list);
+  }
 };
 
 function activeView(){
-
+  const list = loadTodos();
+  for(let i = 0; i < list.length; i++){
+    if(list.completed = false){
+      utilities.showDisplay(list);
+    }
+    else{
+      utilities.hideDisplay(list);
+    }
+  }
 };
 
 function completedView(){
-
+  const list = loadTodos();
+  for(let i = 0; i < list.length; i++){
+    if(list.completed = true){
+      utilities.showDisplay(list);
+    }
+    else{
+      utilities.hideDisplay(list);
+    }
+  }
 };
 //Event Handlers
 function deleteTodo(e){

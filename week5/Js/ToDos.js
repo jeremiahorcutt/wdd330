@@ -2,7 +2,7 @@ import utilities from './utilities.js';
 import ls from './ls.js';
 
 document.querySelector('#add_btn').onclick = newTodo;
-document.querySelector('complete').onclick = complete;
+
 window.onload = function() {
   loadTodos();
   };
@@ -68,9 +68,3 @@ function deleteTodo(e){
   loadTodos();
 }
 
-function complete(){
-  const comp = e.currentTarget;
-  utilities.completeItem(comp.getAttribute('id'));
-  comp.setAttribute('value', "X");
-
-}

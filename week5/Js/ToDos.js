@@ -60,7 +60,7 @@ function addToList(li){
 function deleteTodo(e){
   const btn = e.currentTarget;
   ls.deleteTodo(btn.getAttribute('data-id'));
-  document.querySelectory('#list').innerHTML = '';
+  document.querySelector('#list').innerHTML = '';
   loadTodos();
 }
 

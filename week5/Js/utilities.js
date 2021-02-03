@@ -24,5 +24,6 @@ export default{
   taskNum,
   viewAll,
   viewActive,
-  viewCompleted
+  viewCompleted,
+  completeItem
 };

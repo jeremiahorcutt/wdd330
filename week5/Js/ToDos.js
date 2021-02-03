@@ -5,12 +5,18 @@ document.querySelector('#add_btn').onclick = newTodo;
 document.querySelector('#all').onclick = allView;
 document.querySelector('#completed').onclick = completedView;
 document.querySelector('#active').onclick = activeView;
-document.querySelector('.complete').onclick = complete;
+
 
 window.onload = function() {
   loadTodos();
   };
 
+window.onchange = function(){
+  const list = li.getTodoList()
+    if(list.length !== 0){
+      document.querySelector('.complete').onclick = complete;
+    }
+};
 
 function loadTodos(){
   const todoList = ls.getTodoList();

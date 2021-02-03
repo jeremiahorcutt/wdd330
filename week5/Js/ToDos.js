@@ -115,8 +115,8 @@ function completebtn(e){
   let lineId = btn.getAttribute('id');
   console.log('line id =' + lineId);
   for(let i = 0; i < list.length; i++){
-    if(list[0].id == lineId){
-      list[0].completed = true;
+    if(list[i].id == lineId){
+      list[i].completed = true;
     }
   }
 }

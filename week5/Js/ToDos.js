@@ -58,6 +58,7 @@ function addToList(li){
 
 //Event Handlers
 function deleteTodo(e){
+  alert('deleted')
   const btn = e.currentTarget;
   ls.deleteTodo(btn.getAttribute('data-id'));
   document.querySelector('#list').innerHTML = '';

@@ -11,7 +11,7 @@ function showDisplay(list){
 };
 
 function completeItem(content){
-  document.getElementById(content).style.textDecoration = line-through;
+  document.getElementById(content).style.textDecorationLine = "line-through";
 
 };
 

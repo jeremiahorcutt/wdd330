@@ -8,7 +8,9 @@ document.querySelector('#active').onclick = activeView;
 
 
 window.onload = function() {
+  let list = ls.getTodoList();
   loadTodos();
+  utilities.taskNum(list);
   };
 
 function loadTodos(){
@@ -107,6 +109,8 @@ function deleteTodo(e){
   ls.deleteTodo(btn.getAttribute('data-id'));
   document.querySelector('#list').innerHTML = '';
   loadTodos();
+  let list = ls.getTodoList;
+  utilities.taskNum(list);
 }
 
 function completebtn(e){
@@ -122,5 +126,6 @@ function completebtn(e){
     }
   }
   ls.loadTodos;
+  utilities.taskNum(list);
 }
 

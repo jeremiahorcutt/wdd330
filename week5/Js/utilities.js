@@ -1,5 +1,9 @@
-function taskNum(){
-   
+function taskNum(list){
+  let counter = 0; 
+  for(let i = 0; i < list.lenght; i++){
+     counter += 1;
+   }
+   document.getElementById('counter_span').innerHTML = counter;
 };
 
 function hideDisplay(list){

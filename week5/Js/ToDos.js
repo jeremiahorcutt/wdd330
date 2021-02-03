@@ -5,7 +5,7 @@ document.querySelector('#add_btn').onclick = newTodo;
 document.querySelector('#all').onclick = allView;
 document.querySelector('#completed').onclick = completedView;
 document.querySelector('#active').onclick = activeView;
-document.querySelector('.complete').addEventListener("click", completebtn);
+
 
 window.onload = function() {
   loadTodos();
@@ -41,7 +41,7 @@ function createTodoElement(todo){
   completeBtn.setAttribute('type', 'button');
   completeBtn.setAttribute('id', todo.id)
   completeBtn.classList.add('complete');
-  completeBtn.setAttribute('onclick', 'completebtn();');
+  completeBtn.addEventListener("click", completebtn);
 
   const todoContent = document.createElement('p');
   todoContent.classList.add('todo-content');

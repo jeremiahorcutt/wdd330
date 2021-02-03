@@ -12,7 +12,7 @@ window.onload = function() {
   };
 
 window.onchange = function(){
-  const list = li.getTodoList()
+  const list = ls.getTodoList()
     if(list.length !== 0){
       document.querySelector('.complete').onclick = complete;
     }

@@ -10,7 +10,8 @@ function showDisplay(list){
   document.getElementById(list).style.display = "flex";
 };
 
-function completeItem(){
+function completeItem(content){
+  document.getElementById(content).style.textDecoration = line-through;
 
 };
 

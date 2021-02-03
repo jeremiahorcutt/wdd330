@@ -46,6 +46,7 @@ function createTodoElement(todo){
   const todoContent = document.createElement('p');
   todoContent.classList.add('todo-content');
   todoContent.innerText = todo.content;
+  todoContent.setAttribute('id', todo.id + "Content");
 
   const deleteBtn = document.createElement('input');
   deleteBtn.setAttribute('type', 'button');
@@ -111,7 +112,7 @@ function deleteTodo(e){
 function completebtn(e){
   const list = ls.getTodoList();
   const btn = e.currentTarget;
-  utilities.completeItem(btn.getAttribute('id'));
+  utilities.completeItem(btn.getAttribute('id') + "Content");
   let lineId = btn.getAttribute('id');
   console.log('line id =' + lineId);
   for(let i = 0; i < list.length; i++){

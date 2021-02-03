@@ -120,5 +120,6 @@ function completebtn(e){
     }
   }
   ls.saveTodo(list);
+  ls.loadTodos;
 }
 

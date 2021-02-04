@@ -109,7 +109,7 @@ function recomplete(){
   for(let i = 0; i < list.length; i++){
     if(list[i].completed == true){
       utilities.completeItem(list[i].id + "Content");
-      let btn = document.getElementById(list[i]);
+      let btn = document.getElementById(list[i].id);
       btn.setAttribute('value', 'X');
     }
   }

@@ -126,6 +126,6 @@ function completebtn(e){
     }
   }
   ls.loadTodos;
-  utilities.taskNum(list);
+  utilities.taskNum(list.completed);
 }
 

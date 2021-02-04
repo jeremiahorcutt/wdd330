@@ -125,8 +125,8 @@ function task(){
       counter ++;
       return counter;
     }
+    document.getElementById('counter_span').innerHTML = counter;
   }
-  document.getElementById('counter_span').innerHTML = counter;
 }
 
 //Event Handlers

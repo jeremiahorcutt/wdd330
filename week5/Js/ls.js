@@ -1,6 +1,6 @@
 function saveTodo(todo){
   const toDoList = getTodoList();
-  foreach(toDo in toDoList){
+  foreach(toDo in toDoList);{
   if(toDo.id !== todo){
   toDoList.push(todo);
   localStorage.setItem('toDoList', JSON.stringify(toDoList));

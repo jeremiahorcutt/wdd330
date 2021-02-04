@@ -119,8 +119,8 @@ function recomplete(){
 //Task counter
 function task(){
   let list = ls.getTodoList();
+  let counter = 0;
   for(let i = 0; i < list.length; i++){
-    let counter = 0;
     if(list[i].completed == false){
       counter ++;
       return counter;

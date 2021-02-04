@@ -10,6 +10,7 @@ document.querySelector('#active').onclick = activeView;
 window.onload = function() {
   let list = ls.getTodoList();
   loadTodos();
+  recomplete();
   utilities.taskNum(list);
   };
 
@@ -103,6 +104,14 @@ function completedView(){
     }
   }
 };
+function recomplete(){
+  let list = ls.getTodoList;
+  for(let i = 0; i < list.length; i++){
+    if(list[i].completed == true){
+      utilities.completeItem(list[i].id + "Content");
+    }
+  }
+}
 //Event Handlers
 function deleteTodo(e){
   const btn = e.currentTarget;
@@ -122,6 +131,7 @@ function completebtn(e){
   for(let i = 0; i < list.length; i++){
     if(list[i].id == lineId){
       list[i].completed = true;
+      saveTodo(list[i]);
     }
   }
   ls.loadTodos;

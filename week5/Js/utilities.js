@@ -1,7 +1,7 @@
 function taskNum(list){
   let counter = 0;
   for(let i = 0; i < list.length; i++){
-    if(list.completed == false){
+    if(list == false){
      counter += 1;
    };
   };

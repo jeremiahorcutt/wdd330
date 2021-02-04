@@ -8,7 +8,6 @@ document.querySelector('#active').onclick = activeView;
 
 
 window.onload = function() {
-  let list = ls.getTodoList();
   loadTodos();
   recomplete();
   task();

@@ -1,11 +1,8 @@
 function saveTodo(todo){
   const toDoList = getTodoList();
-  for(let i = 0; i < toDoList.length; i++);{
-    if(toDoList[i].id !== todo.id){
-      toDoList.push(todo);
-      localStorage.setItem('toDoList', JSON.stringify(toDoList));
-  }
-}
+
+  toDoList.push(todo);
+  localStorage.setItem('toDoList', JSON.stringify(toDoList));
 };
 
 function deleteTodo(id){

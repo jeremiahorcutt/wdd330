@@ -123,9 +123,7 @@ function task(){
   for(let i = 0; i < list.length; i++){
     if(list[i].completed == false){
       counter ++;
-      console.log(counter)
     }
-    console.log("1 " + counter)
     document.getElementById('counter_span').innerHTML = counter;
   }
 }
@@ -152,7 +150,7 @@ function completebtn(e){
       ls.saveTodo(list[i]);
     }
   }
-  ls.loadTodos;
+  loadTodos;
   task();
 }
 

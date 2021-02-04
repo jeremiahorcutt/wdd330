@@ -123,7 +123,9 @@ function task(){
   for(let i = 0; i < list.length; i++){
     if(list[i].completed == false){
       counter ++;
+      console.log(counter)
     }
+    console.log("1 " + counter)
     document.getElementById('counter_span').innerHTML = counter;
   }
 }

@@ -133,6 +133,7 @@ function completebtn(e){
   for(let i = 0; i < list.length; i++){
     if(list[i].id == lineId){
       list[i].completed = true;
+      ls.deleteTodo(list[i].id);
       ls.saveTodo(list[i]);
     }
   }

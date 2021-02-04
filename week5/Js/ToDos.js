@@ -26,6 +26,7 @@ function newTodo(){
   const todoDiv = createTodoElement(todo);
   addToList(todoDiv);
   ls.saveTodo(todo);
+  task();
 }
 
 function createTodo() {

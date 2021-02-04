@@ -123,9 +123,9 @@ function task(){
   for(let i = 0; i < list.length; i++){
     if(list[i].completed == false){
       counter ++;
-      return counter;
+      document.getElementById('counter_span').innerHTML = counter;
     }
-    document.getElementById('counter_span').innerHTML = counter;
+    
   }
 }
 

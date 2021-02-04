@@ -136,7 +136,7 @@ function deleteTodo(e){
   document.querySelector('#list').innerHTML = '';
   loadTodos();
   let list = ls.getTodoList();
-  utilities.taskNum(list);
+  task();
 }
 
 function completebtn(e){
@@ -153,6 +153,6 @@ function completebtn(e){
     }
   }
   ls.loadTodos;
-  utilities.taskNum(list, list.completed);
+  task();
 }
 

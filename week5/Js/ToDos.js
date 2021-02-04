@@ -11,7 +11,7 @@ window.onload = function() {
   let list = ls.getTodoList();
   loadTodos();
   recomplete();
-  utilities.taskNum(list);
+  utilities.taskNum(list, list.completed);
   };
 
 function loadTodos(){
@@ -138,6 +138,6 @@ function completebtn(e){
     }
   }
   ls.loadTodos;
-  utilities.taskNum(list.completed);
+  utilities.taskNum(list, list.completed);
 }
 

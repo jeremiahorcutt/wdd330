@@ -11,7 +11,7 @@ window.onload = function() {
   let list = ls.getTodoList();
   loadTodos();
   recomplete();
-  utilities.taskNum(list, list.completed);
+  task();
   };
 
 function loadTodos(){
@@ -104,6 +104,7 @@ function completedView(){
     }
   }
 };
+//Change styles on completed items on load
 function recomplete(){
   let list = ls.getTodoList();
   for(let i = 0; i < list.length; i++){
@@ -114,6 +115,20 @@ function recomplete(){
     }
   }
 }
+
+//Task counter
+function task(){
+  let list = ls.getTodoList();
+  for(let i = 0; i < list.length; i++){
+    let counter = 0;
+    if(list[i].completed == false){
+      counter ++;
+      return counter;
+    }
+  }
+  document.getElementById('counter_span').innerHTML = counter;
+}
+
 //Event Handlers
 function deleteTodo(e){
   const btn = e.currentTarget;

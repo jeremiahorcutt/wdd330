@@ -17,7 +17,7 @@ const links=[
     },{
         label: "ToDo List",
         url: "week5/list.html"
-    }
+    },
 ]
 
 for (let i = 0; i < links.length; i++ ) {
@@ -28,3 +28,19 @@ for (let i = 0; i < links.length; i++ ) {
   list.appendChild(alink);
   document.querySelector('ol#tableofcontents').appendChild(list);
 };
+
+const links2=[
+    {
+        label: "Week 7",
+        url: "week7/index.html"
+    }
+]
+
+for (let i = 0; i < links2.length; i++ ) {
+    let list = document.createElement('li');
+    let alink = document.createElement('a');
+    alink.setAttribute("href", links2[i].url);
+    alink.textContent = links2[i].label;
+    list.appendChild(alink);
+    document.querySelector('ol#tableofcontents2').appendChild(list);
+  };

@@ -46,9 +46,7 @@ window.onload = function() {
 };
 
 function buildTable(heroes){
-  var array = heroes['heroes'];
-  console.log(heroes);
-  console.log(array.length);
+  let array = heroes['heroes'];
   for(let i = 0; i < array.length; i++){
     let tr = document.createElement('tr');
     let alias = document.createElement("th");

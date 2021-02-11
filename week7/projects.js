@@ -33,6 +33,18 @@ console.log(every([], n => n < 10));
 
 //Marvel Mashup
 
+//function loadDoc() {
+  //var xhttp = new XMLHttpRequest();
+  //xhttp.onreadystatechange = function() {
+    //if (this.readyState == 4 && this.status == 200) {
+    //let data = JSON.parse(xhttp.responseText);
+    //buildTable(data);
+    //}
+  //};
+  //xhttp.open("GET", "https://jeremiahorcutt.github.io/wdd330/text.JSON", true);
+  //xhttp.send();
+//}
+
 let requestURL = 'https://jeremiahorcutt.github.io/wdd330/text.JSON';
 let request = new XMLHttpRequest();
 
@@ -41,6 +53,7 @@ request.responseType = 'json';
 request.send();
 
 window.onload = function() {
+//loadDoc();
  let heroes = request.response;
  buildTable(heroes);
 };

@@ -1,6 +1,6 @@
 //Flatten
 let arrays = [[1, 2, 3], [4, 5], [6]];
-
+console.log('Flatten')
 function flatten(arrays){
 console.log(arrays.reduce((first, second) => first.concat(second), []));
 };
@@ -12,7 +12,7 @@ function loop(value, test, update, show){
      show(i);
   }
 }
-
+console.log('Your Own Loop')
 loop(3, n => n > 0, n => n - 1, console.log);
 
 //Everything
@@ -23,7 +23,7 @@ function every(array, test) {
   return true;
 }
 
-
+console.log('Everything')
 console.log(every([1, 3, 5], n => n < 10));
 // → true
 console.log(every([2, 4, 16], n => n < 10));

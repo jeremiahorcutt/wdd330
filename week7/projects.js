@@ -58,6 +58,7 @@ function buildTable(heroes){
     realName.textConent = array[i].realname;
     console.log(array[i].realname);
     bio.textConent = array[i].bio;
+    console.log(array[i].bio);
      tr.appendChild(alias);
      tr.appendChild(realName);
      tr.appendChild(bio);

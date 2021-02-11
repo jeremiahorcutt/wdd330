@@ -46,8 +46,8 @@ function loadDoc() {
 
 function buildTable(heroes){
   console.log(heroes);
-  console.log(heroes.length);
-  for(let i = 0; i < heroes.length; i++){
+  console.log(Object.keys(heroes).length);
+  for(let i = 0; i < Object.keys(heroes).length; i++){
     let tr = document.createElement('tr');
     let alias = document.createElement("th");
     let realName = document.createElement("td");

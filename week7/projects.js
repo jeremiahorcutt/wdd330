@@ -32,10 +32,6 @@ console.log(every([], n => n < 10));
 // → true
 
 //Marvel Mashup
-
-
-
-
 function loadDoc() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -57,7 +53,7 @@ function buildTable(heroes){
     alias.textContent = heroes[i].name;
     realName.textConent = heroes[i].realName;
     bio.textConent = heroes[i].bio;
-     tr.appendChild(alias, realName, bio);
+     tr.append(alias, realName, bio);
      let table = document.querySelector('#marvel');
      table.appendChild(tr);
   }

@@ -57,9 +57,9 @@ function buildTable(heroes){
     alias.textContent = array[i].name;
     realName.textContent = array[i].realname;
     bio.textContent = array[i].bio;
-     tr.appendChild(alias);
-     tr.appendChild(realName);
-     tr.appendChild(bio);
+     tr.appendChild(alias, realName, bio);
+     //tr.appendChild(realName);
+     //tr.appendChild(bio);
      let table = document.querySelector('#marvel');
      table.appendChild(tr);
   }

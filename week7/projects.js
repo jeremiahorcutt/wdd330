@@ -49,7 +49,7 @@ function buildTable(heroes){
   let array = heroes['heroes'];
   for(let i = 0; i < array.length; i++){
     let tr = document.createElement('tr');
-    let alias = document.createElement("th");
+    let alias = document.createElement("td");
     let realName = document.createElement("td");
     let bio = document.createElement("td");
 

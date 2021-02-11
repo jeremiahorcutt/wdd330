@@ -38,6 +38,7 @@ function loadDoc() {
     if (this.readyState == 4 && this.status == 200) {
     let data = JSON.parse(xhttp.responseText);
     buildTable(data);
+    console.log(data);
     }
   };
   xhttp.open("GET", "https://jeremiahorcutt.github.io/wdd330/text.JSON", true);

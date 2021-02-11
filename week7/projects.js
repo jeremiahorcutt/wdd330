@@ -62,4 +62,6 @@ function buildTable(heroes){
      table.appendChild(tr);
   }
 }
+window.onload = function() {
 loadDoc();
+};

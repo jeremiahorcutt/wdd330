@@ -10,7 +10,72 @@
   <header><h1>Notes</h1></header>
   <main>
     <p>
-
+      Chap 11<br>
+      Functions have built-in properties such as length , but can have custom properties added.<br>
+      function square(x) {<br>
+          return x*x;<br>
+      }<br>
+      square.length<br>
+       1<br>
+      <br>
+      All functions have call() and apply() methods that can invoke a function with the value of this bound to an object that is provided as an argument.<br>
+      function sayHello(){<br>
+          return `Hello, my name is ${ this.name }`;<br>
+      }<br>
+      const clark = { name: 'Clark' };<br>
+      const bruce = { name: 'Bruce' };<br>
+      sayHello.call(clark);<br>
+       'Hello, my name is Clarke'<br>
+      sayHello.call(bruce);<br>
+       'Hello, my name is Bruce'<br>
+      <br>
+      You can and your own properties to an object as well<br>
+      Memoization is the process using cache to save the result of a function to be reused in the future without having to run the function again<br>
+      IIFE-<br>
+      Immediately Invoked Function Expressions or IIFEs are functions that are enclosed in parentheses and immediately followed by double parentheses<br> so they’re invoked. They are useful for name spacing variables and setting default values.
+      (function(){<br>
+      const temp = 'World';<br>
+      console.log(`Hello ${temp}`);<br>
+      })();<br>
+       'Hello World'<br>
+      
+      IIFEs are a useful way of performing a task while keeping any variables wrapped up within the scope of the function<br>
+      An IIFE can be used to set up any initialization code that there’ll be no need for again<br>
+      -Dynamic functions<br>
+      Functions are able to dynamically redefine themselves in the body of the function, depending on certain conditions.<br>
+      If any properties have previously been set on the function, these will be lost when the function redefines itself<br>
+      A recursive function will keep invoking itself until a certain condition is met.<br>
+      function factorial(n) {<br>
+          if (n === 0) {<br>
+              return 1;<br>
+          } else {<br>
+              return n * factorial(n - 1);<br>
+          }<br>
+      }<br>
+      <br>
+      Callbacks are frequently used in asynchronous programming as part of the event loop. This means that a program can <br>continue to run in a single thread while waiting for another task to be completed.<br>
+      Promises can be used instead of callbacks to deal with multiple asynchronous actions in sequence. They also provide a <br>nicer mechanism for handling errors.<br>
+      Functions that return other functions are known as higher-order functions.<br>
+      A closure is the process of keeping a reference to a variable available outside the scope of the function it was <br>originally defined in.<br>
+      A generator is created by placing an asterisk character (*) after the function keyword.<br>
+      A generator function will return an iterator object that provides a next() method, which returns the next value in a <br>sequence that is defined in the generator function.<br>
+      Functional programming involves breaking processes down into steps that can be applied as a series of functions.<br>
+      Pure functions are functions that don't rely on the state of the code they are called from, have no side-effects, <br>and always give the same result when given the same arguments (referential transparency).<br>
+      Currying or partial application is the process of applying one argument at a time to a function. A new function is <br>returned until all the arguments have been used.<br>
+      <br>
+      Chap 13- Ajax<br>
+      Ajax is a technique for sending and receiving data asynchronously in the background.<br>
+      The data can be sent in many forms, but it is usually in JSON.<br>
+      Ajax can be used for making partial page updates without having to do a full page reload.<br>
+      Ajax can be used for communicating with external APIs.<br>
+      Ajax requests can be made using the Fetch API.<br>
+      <br>
+      The Response interface allows you to control the response received from a request or to create your own response objects.<br>
+      The Request interface allows you to create a request object that contains information about the request being made,<br> such as the URL and headers.<br>
+      The Headers interface allows you to create HTTP headers that can be added to a request or response object.<br>
+      Requests can retrieve data using a GET request, or send data using a POST request.<br>
+      The Form Data interface makes it easier to send data from forms.<br>
+      
         </p>
   </main>
 </body>

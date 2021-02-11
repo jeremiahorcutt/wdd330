@@ -55,9 +55,9 @@ function buildTable(heroes){
     let realName = document.createElement("td");
     let bio = document.createElement("td");
 
-    alias.textContent = heroes[i].name;
-    realName.textConent = heroes[i].realName;
-    bio.textConent = heroes[i].bio;
+    alias.textContent = array[i].name;
+    realName.textConent = array[i].realName;
+    bio.textConent = array[i].bio;
      tr.append(alias, realName, bio);
      let table = document.querySelector('#marvel');
      table.appendChild(tr);

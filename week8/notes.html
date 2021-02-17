@@ -10,7 +10,96 @@
   <header><h1>Notes</h1></header>
   <main>
     <p>
-
+      CSS3 Transforms and Transitions-----------------<br>
+      Transforms-----------------------------------------<br>
+      The CSS3 transform property lets you lets you translate, rotate, scale, and/or skew any element on the page<br>
+      Translation<br>
+      Translation functions allow you to move elements left, right, up, or down. These functions are similar to<br>
+       the behavior of position: relative; when declaring top and left , moving elements up and down or left <br>
+      and right along the x and y axes.<br>
+      transform: translate(45px, -45px);<br>
+      Scaling<br>
+      The scale(x,y) function scales an element by the defined factors horizontally then vertically. If only one <br>
+      value is provided, it will be used for both the x and y values, growing or shrinking your element or <br>
+      pseudo-element while maintaining the original aspect ratio<br>
+      transform: translateX(40px) scale(1.5);<br>
+      *Note that you shouldn’t declare a new transform : because of the cascade, a second transform would override the<br>
+       first. To declare multiple transformations, provide a space-separated list of transform functions<br>
+      Rotation<br>
+      The rotate() function rotates an element around the point of origin by a specified angle value<br>
+      transform: rotate(10deg) translateX(40px) scale(1.5);<br>
+      <br>
+      Skew<br>
+      The skew(x,y) function specifies a skew along the x and y axes<br>
+      transform: skew(15deg, 4deg);<br>
+      *The order of transform functions does matter: if you rotate before translating, your translate direction will be on the rotated axis<br>
+      Transitions--------------------------------------<br>
+      Declare the original state of the element in the default style declaration.<br>
+      Declare the final state of your transitioned element; for example, a :hover state.<br>
+      Include the transition functions in your default style declaration using the transition properties, including: <br>
+      transition-property , transition-duration , transition-timing-function , and transition-delay<br>
+      The transition-duration property sets how long the transition will take<br>
+      The transition-timing-function lets you control the pace of the transition in even more granular detail<br>
+      The most common timing functions include the key terms ease, linear, ease-in, ease-out, or ease-in-<br>
+      Out<br>
+      The transition-delay property makes it possible to introduce a delay before the transition begins<br>
+      Longhand:<br>
+      .ad-ad2 h1 span {<br>
+          transition-property: transform; <br>
+          transition-duration: 0.2s;  <br>
+          transition-timing-function: ease-out;<br>
+          transition-delay: 50ms;<br>
+      }<br>
+      Shorthand:<br>
+      .ad-ad2 h1 span {<br>
+          transition: transform 0.2s ease-out 50ms;<br>
+      }<br>
+      Animations---------------------<br>
+      A keyframe is a snapshot that defines a starting or end point of any smooth transition<br>
+      @keyframes myAnimation { <br>
+          /* put animation keyframes here */<br>
+      }<br>
+      the animation-timing-function determines how the animation will progress over its duration<br>
+      The animation-iteration-count property lets you define how many times the animation will play through<br>
+      The animation-delay property is used to define how many milliseconds or seconds to wait before the <br>
+      browser begins the animation<br>
+      .verbose {<br>
+          animation-name: appearDisappear; <br>
+          animation-duration: 300ms; <br>
+          animation-timing-function: ease-in;<br>
+          animation-iteration-count: 1;<br>
+          animation-direction: alternate;<br>
+          animation-delay: 5s;<br>
+          animation-fill-mode: backwards;<br>
+          animation-play-state: running;<br>
+      }<br>
+      /* shorthand */<br>
+      .concise {<br>
+          animation: 300ms ease-in alternate 5s backwards appearDisappear;<br>
+      }<br>
+      <br>
+      Canvas, SVG, and Drag and Drop------------------------------------------------------------------<br>
+      Canvas---------<br>
+      With canvas, we can draw shapes and lines, arcs and text, gradients and patterns. In addition, canvas <br>
+      gives us the power to manipulate pixels in images and even video<br>
+      &lsaquo;canvas id="myCanvas" class="myCanvas" width="200" height="200"&rsaquo;<br>
+          Sorry! Your browser doesn’t support Canvas.<br>
+      &lsaquo;/canvas&rsaquo;<br>
+      the width and height attributes determine how large the canvas’s coordinate system is<br>
+      var canvas = document.getElementById("myCanvas");<br>
+      var context = canvas.getContext("2d");<br>
+      context.strokeStyle = "red";<br>
+      context.fillStyle = "blue";<br>
+      <br>
+      SVG---------------<br>
+      SVG stands for Scalable Vector Graphics, a specific file format that allows you to describe vector graphics <br>
+      using XML<br>
+      <br>
+      Both canvas and SVG allow you to draw custom shapes, paths, and fonts<br>
+      Drag and Drop--------------------<br>
+      This API allows you to specify that certain elements are draggable, and then specify what should happen <br>
+      when these draggable elements are dragged over or dropped onto other elements on the page<br>
+      
         </p>
   </main>
 </body>

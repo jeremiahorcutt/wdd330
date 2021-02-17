@@ -15,14 +15,15 @@
     
        }
        @keyframes colorshow { 
-        from {filter: blur(4px);;}
-        to {filter: brightness(0.30);}
-        to {filter: contrast(180%);}
-        to {filter: saturate(7);}
-        to {filter: sepia(100%);}
+        0% {filter: blur(4px);;}
+        20% {filter: brightness(0.30);}
+        40% {filter: contrast(180%);}
+        60% {filter: saturate(7);}
+        80% {filter: sepia(100%);}
+        100% {filter: opacity(50%);}
        }
        #lights{
-         animation: 300ms infinite linear  5s colorshow;
+         animation: 500ms infinite linear  5s colorshow;
        }
     </style>
   </head>

@@ -11,9 +11,7 @@
        img{
          max-width:50%;
        }
-       @keyframes rotateimg { 
-        from {transform: rotate(20deg);}
-       }
+       
        @keyframes colorshow { 
         0% {filter: blur(4px);}
         20% {filter: brightness(0.30);}
@@ -23,13 +21,13 @@
         100% {filter: opacity(50%);}
        }
        #lights{
-         animation: 1500ms infinite linear  0s colorshow rotateimg;
+         animation: 1500ms infinite linear  0s colorshow;
        }
     </style>
   </head>
   <body>
     <header><h1>Projects</h1></header>
-    <h1>Animation and Transition</h1>
+    <h1>Animation</h1>
     <img src="bulb.jpg" alt="lights" id="lights" />
     <h1>Canvas</h1>
     <canvas id="myCanvas" class="myCanvas" width="200" height="200">

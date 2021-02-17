@@ -15,11 +15,11 @@
     
        }
        @keyframes colorshow { 
-        from {background-color: red;}
-        to {background-color: yellow;}
-        to {background-color: green;}
-        to {background-color: blue;}
-        to {background-color: violet;}
+        from {filter: blur(4px);;}
+        to {filter: brightness(0.30);}
+        to {filter: contrast(180%);}
+        to {filter: saturate(7);}
+        to {filter: sepia(100%);}
        }
        #lights{
          animation: 300ms infinite linear  5s colorshow;

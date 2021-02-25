@@ -14,8 +14,9 @@ function twenty(arrayItem){
 
 let number = 0;
 
-/* do{
+
+ do{
     number = Math.round(Math.random() * 10);
     console.log(number);
 }
-while (number < 70 && number > 50); */
+while (number != 5); 

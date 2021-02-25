@@ -18,4 +18,4 @@ do{
     number = Math.round(Math.random() * 10);
     console.log(number);
 }
-while (number != 23);
+while (number < 70 && number > 50);

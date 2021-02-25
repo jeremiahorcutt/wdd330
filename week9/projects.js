@@ -19,4 +19,4 @@ let number = 0;
     number = Math.round(Math.random() * 10);
     console.log(number);
 }
-while (number != 5); 
+while (number > 5); 

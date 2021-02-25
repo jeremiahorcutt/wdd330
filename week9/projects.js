@@ -11,3 +11,11 @@ function twenty(arrayItem){
     let total = arrayItem * 20;
     console.log("outcome 20: " + total);
 }
+
+let number = 0;
+
+do{
+    number = Math.random() * 10;
+    console.log(number);
+}
+while (number != 23);

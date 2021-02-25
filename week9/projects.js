@@ -15,7 +15,7 @@ function twenty(arrayItem){
 let number = 0;
 
 do{
-    number = Math.random() * 10;
+    number = Math.round(Math.random() * 10);
     console.log(number);
 }
 while (number != 23);

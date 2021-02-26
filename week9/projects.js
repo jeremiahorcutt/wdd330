@@ -1,4 +1,4 @@
-var array = [1, 3, 5, 7, 11, 13, 17, 19]
+let array = [1, 3, 5, 7, 11, 13, 17, 19]
 
 array.forEach(function(arrayItem){
     let total = arrayItem * 10;
@@ -20,3 +20,7 @@ let number = 0;
     console.log(number);
 }
 while (number > 5); 
+
+for(arr in array){
+    console.log(arr);
+}

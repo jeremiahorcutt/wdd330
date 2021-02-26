@@ -43,3 +43,10 @@ console.log(" ")
 console.log("Cookie Removal");
 document.cookie = 'name=Batman; expires=Thu, 01 Jan 1970 00:00:01 GMT';
 document.cookie;
+
+const squareElement = document.getElementById('square');
+let angle = 0;
+setInterval( () => {
+    angle = (angle + 2) % 360;
+    squareElement.style.transform = `rotate(${angle}deg)`
+}, 1000/60);

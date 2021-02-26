@@ -53,9 +53,12 @@ setInterval( () => {
 
 const squareElement2 = document.getElementById('square2');
 let angle2 = 0;
+
 function rotate() {
     angle2 = (angle2 + 2)%360;
     squareElement2.style.transform = `rotate(${angle2}deg)`
     window.requestAnimationFrame(rotate);
 }
+
 const id = requestAnimationFrame(rotate);
+

@@ -42,6 +42,9 @@ const links2=[
     },{
         label: "Week 10",
         url: "week10/index.html"
+    },{
+        label: "Block 2 Challenge",
+        url: "week11/periodic.html"
     }
 ]
 

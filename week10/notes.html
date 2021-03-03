@@ -10,7 +10,165 @@
   <header><h1>Notes</h1></header>
   <main>
     <p>
-
+      Client-side form validation<br>
+      Built-in form validation<br>
+                  required: Specifies whether a form field needs to be filled in before the form can be submitted.<br>
+                  minlength and maxlength: Specifies the minimum and maximum length of textual data (strings)<br>
+                  min and max: Specifies the minimum and maximum values of numerical input types<br>
+                  type: Specifies whether the data needs to be a number, an email address, or some other specific preset type.<br>
+                  pattern: Specifies a regular expression that defines a pattern the entered data needs to follow.<br>
+                  <br>
+      Validating against a regular expression<br>
+      Regex examples<br>
+      
+                  a — Matches one character that is a (not b, not aa, and so on).<br>
+                  abc — Matches a, followed by b, followed by c.<br>
+                  ab?c—Matches a, optionally followed by a single b, followed by c. ( ac or abc)<br>
+                  ab*c—Matches a, optionally followed by any number of bs, followed by c. ( ac , abc, abbbbbc, and so on).<br>
+                  a|b — Matches one character that is a or b.<br>
+                  abc|xyz — Matches exactly abc or exactly xyz (but not abcxyz or a or y, and so on).<br>
+       --------------------------------------------------------------------------<br>      
+              
+      Validating forms using JavaScript<br>
+                  HTMLButtonElement (represents a button element)<br>
+                  HTMLFieldSetElement (represents a fieldset element)<br>
+                  HTMLInputElement (represents an input element)<br>
+                  HTMLOutputElement (represents an output element)<br>
+                  HTMLSelectElement (represents a select element)<br>
+                  HTMLTextAreaElement (represents a textarea element)<br>
+      ============================================================================<br>
+      JS example<br>
+                  // There are many ways to pick a DOM node; here we get the form itself and the email<br>
+                  // input box, as well as the span element into which we will place the error message.<br>
+                  // const form = document.getElementsByTagName('form')[0];<br>
+                  <br>
+                  const email = document.getElementById('mail');<br>
+                  const emailError = document.querySelector('#mail + span.error');<br>
+                  <br>
+                  email.addEventListener('input', function (event) {<br>
+                  // Each time the user types something, we check if the<br>
+                  // form fields are valid.<br>
+                  <br>
+                  if (email.validity.valid) {<br>
+                  // In case there is an error message visible, if the field<br>
+                  // is valid, we remove the error message.<br>
+                  emailError.innerHTML = ''; // Reset the content of the message<br>
+                  emailError.className = 'error'; // Reset the visual state of the message<br>
+                  } else {<br>
+                  // If there is still an error, show the correct error<br>
+                  showError();<br>
+                  }<br>
+                  });<br>
+                  <br>
+                  form.addEventListener('submit', function (event) {<br>
+                  // if the email field is valid, we let the form submit<br>
+                  <br>
+                  if(!email.validity.valid) {<br>
+                  // If it isn't, we display an appropriate error message<br>
+                  showError();<br>
+                  // Then we prevent the form from being sent by canceling the event<br>
+                  event.preventDefault();<br>
+                  }<br>
+                  });<br>
+                  <br>
+                  function showError() {<br>
+                  if(email.validity.valueMissing) {<br>
+                  // If the field is empty<br>
+                  // display the following error message.<br>
+                  emailError.textContent = 'You need to enter an e-mail address.';<br>
+                  } else if(email.validity.typeMismatch) {<br>
+                  // If the field doesn't contain an email address<br>
+                  // display the following error message.<br>
+                  emailError.textContent = 'Entered value needs to be an e-mail address.';<br>
+                  } else if(email.validity.tooShort) {<br>
+                  // If the data is too short<br>
+                  // display the following error message.<br>
+                  emailError.textContent = `Email should be at least ${ email.minLength } characters; you entered ${<br>
+                  email.value.length }.`;<br>
+                  }<br>
+      
+                  // Set the styling appropriately<br>
+                  emailError.className = 'error active';<br>
+                  }
+              ------------------------------------------------------<br>
+      Using Fetch<br>
+      Basic Fetch example<br>
+                  fetch('http://example.com/movies.json')<br>
+                  .then((response) => {<br>
+                  return response.json();<br>
+                  })<br>
+                  .then((data) => {<br>
+                  console.log(data);<br>
+                  });<br>
+        --------------------------------------------------------------<br>
+      Fetch with more options<br>
+                  // Example POST method implementation:<br>
+                  async function postData(url = '', data = {}) {<br>
+                  // Default options are marked with *<br>
+                  const response = await fetch(url, {<br>
+                  method: 'POST', // *GET, POST, PUT, DELETE, etc.<br>
+                  mode: 'cors', // no-cors, *cors, same-origin<br>
+                  cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached<br>
+                  credentials: 'same-origin', // include, *same-origin, omit<br>
+                  headers: {<br>
+                  'Content-Type': 'application/json'<br>
+                  // 'Content-Type': 'application/x-www-form-urlencoded',<br>
+                  },<br>
+                  redirect: 'follow', // manual, *follow, error<br>
+                  referrerPolicy: 'no-referrer', // no-referrer, *client<br>
+                  body: JSON.stringify(data) // body data type must match "Content-Type" header<br>
+                  });<br>
+                  return await response.json(); // parses JSON response into native JavaScript objects<br>
+                  }<br>
+                  <br>
+                  postData('https://example.com/answer', { answer: 42 })<br>
+                  .then((data) => {<br>
+                  console.log(data); // JSON data parsed by `response.json()` call<br>
+                  });<br>
+       ------------------------------------------------------<br>       
+      Uploading Json data<br>
+                  const data = { username: 'example' };<br>
+                  <br>
+                  fetch('https://example.com/profile', {<br>
+                  method: 'POST', // or 'PUT'<br>
+                  headers: {<br>
+                  'Content-Type': 'application/json',<br>
+                  },<br>
+                  body: JSON.stringify(data),<br>
+                  })<br>
+                  .then((response) => response.json())<br>
+                  .then((data) => {
+                  console.log('Success:', data);<br>
+                  })<br>
+                  .catch((error) => {<br>
+                  console.error('Error:', error);<br>
+                  });<br>
+                  <br>
+                  ------------------------------------------------------<br>
+      Checking that the fetch was succesful<br>
+                  fetch('flowers.jpg')<br>
+                  .then((response) => {<br>
+                  if (!response.ok) {<br>
+                  throw new Error('Network response was not ok');<br>
+                  }<br>
+                  return response.blob();<br>
+                  })<br>
+                  .then((myBlob) => {<br>
+                  myImage.src = URL.createObjectURL(myBlob);<br>
+                  })<br>
+                  .catch((error) => {<br>
+                  console.error('There has been a problem with your fetch operation:', error);<br>
+                  });<br>
+              ------------------------------------------------------<br>
+      Response objects<br>
+                  The most common response properties you'll use are:<br>
+                  <br>
+              Response.status — An integer (default value 200) containing the response status code.<br>
+                  Response.statusText — A string (default value "OK"), which corresponds to the HTTP status code message.<br>
+                  Response.ok — seen in use above, this is a shorthand for checking that status is in the range 200-299<br>
+                  inclusive. This returns a Boolean.<br>
+              
+      
         </p>
   </main>
 </body>

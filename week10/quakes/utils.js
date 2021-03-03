@@ -11,8 +11,8 @@ export function getJSON(url) {
             console.log(error);
         });
 }
-   
-export const getLocation = function(options) {
+
+export async const getLocation = function(options) {
     return new Promise(function(resolve, reject) {
         navigator.geolocation.getCurrentPosition(resolve, reject, options);
     });

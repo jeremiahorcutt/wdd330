@@ -1,1 +1,4 @@
-import { getJSON, getLocation } from './utils.js';
+import QuakesController from './quakesController.js';
+
+const quakesController = new QuakesController('#quakeList');
+quakesController.init();

@@ -1,4 +1,4 @@
-import QuakesController from './quakesController.js';
+import QuakesController from './QuakesController.js';
 
-const quakesController = new QuakesController('#quakeList');
-quakesController.init();
+const myQuakesController = new QuakesController('#quakeList');
+myQuakesController.init();

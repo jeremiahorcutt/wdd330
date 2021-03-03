@@ -69,7 +69,7 @@
     audio.currentTime = 0; 
     
     audio.play();
-
+    key.classList.add('play');
 
     //this returns the location of the key on the screen
     let rect = key.getBoundingClientRect();
@@ -91,7 +91,7 @@
 
 
 
-    key.classList.add('play');
+   
   }
 
   const keys = document.querySelectorAll('.key');

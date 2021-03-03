@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>JS Drum Kit</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -70,16 +70,26 @@
     
     audio.play();
 
-    let move=0;
+
+    //this returns the location of the key on the screen
+    let rect = key.getBoundingClientRect();
     
-    for(let i = 0; i < 1; i++){    
-      
-      move += 10;
-      console.log(move);
+    //define the starting Y value of the keys
+    let standardY = 504.5;
+    //this declares a variable as the current Y location of the bottom of the key
+    let newbottom = rect.bottom;  
+    //determines how far it should move on the Y axis
+    let moveDown = newbottom - standardY;
+
+    //check to see if it has moved too far
+    if(moveDown > 100){
+      moveDown = 0;
     };
-    
-  key.style.transform = "translateY(" + move + "px)";
-    
+
+    //moves key down according to calculated value
+    key.style.transform = `translateY(${moveDown}px)`;
+
+
 
     key.classList.add('play');
   }
@@ -94,12 +104,7 @@
   }
 
   window.addEventListener('keydown', pressKey);
-
-
-
-
 </script>
-
 
 </body>
 </html>

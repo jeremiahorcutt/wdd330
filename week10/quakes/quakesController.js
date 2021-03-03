@@ -1,5 +1,5 @@
   
-import { getLocation } from './scripts/utilities.js';
+import { getLocation } from './utils.js';
 import Quake from './Quake.js';
 import QuakesView from './QuakesView.js';
 

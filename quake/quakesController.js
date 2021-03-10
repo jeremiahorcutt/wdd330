@@ -33,8 +33,8 @@ export default class QuakesController {
         this.position.lat = posFull.coords.latitude;
         this.position.lon = posFull.coords.longitude;
         
-        console.log("Lat" + this.location.latitude);
-        console.log("Lon" + this.location.longitude);
+        console.log(posFull);
+        console.log(posFull);
       } catch (error) {
         console.log(error);
       }

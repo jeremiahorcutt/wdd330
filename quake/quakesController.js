@@ -24,13 +24,15 @@ export default class QuakesController {
     this.getQuakesByRadius(100);
   }
   async initPos() {
-    // if a position has not been set
+    // if a position has not been set[]
     if (this.position.lat === 0) {
       try {
         // try to get the position using getLocation()
-        
+        const location = getLocation();
         // if we get the location back then set the latitude and longitude into this.position
-        
+        this.position.lat = location.latitude;
+        this.position.lon = location.longitude;
+        console.log(location.latitude);
       } catch (error) {
         console.log(error);
       }

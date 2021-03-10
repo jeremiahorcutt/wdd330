@@ -16,7 +16,7 @@
       .map(quake => {
         return `<li data-id=${quake.id}>${
           quake.properties.title
-        } <div>${new Date(quake.properties.time)}</div></li>`;
+        } <div>${new Date(quake.properties.time)}</div></li><hr>`;
       })
       .join('');
   }

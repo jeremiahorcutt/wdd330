@@ -6,7 +6,7 @@
       quakeList.features.forEach(element => {
         let newli = document.createElement('li');
         newli.setAttribute("data-id", element.id);
-        newli.innerHTML = `${element.properties.title}<p>${element.properties.time}</p>`;
+        newli.innerHTML = `${element.properties.title}<p>${new Date(element.properties.time)}</p>`;
         listElement.appendChild(newli);
       });
       

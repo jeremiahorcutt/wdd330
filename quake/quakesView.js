@@ -8,7 +8,7 @@
         console.log(element);
         item.setAttribute('data-id', element.id);
         item.innerHTML = `${element.properties.title} 
-        <p>${new Date(element.properties.time)}</p>`;
+        <p>${new Date(element.properties.time)}</p><br>`;
         listElement.appendChild(item);
       });
       

@@ -3,6 +3,7 @@
 window.onload = function() {
     createTable();
     groupRows();
+    groupColumns();
   };
 
 
@@ -33,7 +34,7 @@ window.onload = function() {
             li.setAttribute("data-id", iMinus5);
             li.setAttribute("id", "element" + i);
         }else{
-            li.setAttribute("class", "emptBlock");
+            li.setAttribute("class", "emptyBlock");
             li.setAttribute("id", "element" + i);
         };
         let ul = document.querySelector("#periodicGrid");
@@ -41,23 +42,58 @@ window.onload = function() {
     }
 } 
 
+//function for sperating the li's into rows for easier css grid mapping
 function groupRows(){
   for(let i = 1; i < 127; i++){
     let element = document.getElementById('element'+ i); 
     if(i <= 18){
-         element.setAttribute("class", "row1");
+         element.classList.add("row1");
       }else if(i >= 19 && i <= 36){
-        element.setAttribute("class", "row2");
+        element.classList.add("row2");
       }else if(i >= 37 && i <= 54){
-        element.setAttribute("class", "row3");
+        element.classList.add("row3");
       }else if(i >= 55 && i <= 72){ 
-        element.setAttribute("class", "row4");
+        element.classList.add("row4");
       }else if(i >= 73 && i <= 90){
-        element.setAttribute("class", "row5");
+        element.classList.add("row5");
       }else if(i >= 91 && i <= 108){
-        element.setAttribute("class", "row6");
+        element.classList.add("row6");
       }else if(i >= 109 && i <= 126){
-        element.setAttribute("class", "row7");
+        element.classList.add("row7");
       }
 }
-} 
+}
+
+//function for sperating the li's into columns for easier css grid mapping
+function groupColumns(){
+let x1 = 1;
+let x2 = 19;
+let x3 = 37;
+let x4 = 55;
+let x5 = 73;
+let x6 = 91;
+let x7 = 109;
+for(let i = 1; i <= 18; i++){
+      let block1  = document.getElementById("element" + x1);
+      block1.classList.add("column" + i);
+      let block2  = document.getElementById("element" + x2);
+      block2.classList.add("column" + i);
+      let block3  = document.getElementById("element" + x3);
+      block3.classList.add("column" + i);
+      let block4  = document.getElementById("element" + x4);
+      block4.classList.add("column" + i);
+      let block5  = document.getElementById("element" + x5);
+      block5.classList.add("column" + i);
+      let block6  = document.getElementById("element" + x6);
+      block6.classList.add("column" + i);
+      let block7 = document.getElementById("element" + x7);
+      block7.classList.add("column" + i);
+      x1 += 1;
+      x2 += 1;
+      x3 += 1;
+      x4 += 1;
+      x5 += 1;
+      x6 += 1;
+      x7 += 1;
+}
+}

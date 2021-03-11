@@ -1,46 +1,41 @@
 
 
+window.onload = function() {
+    createTable();
+  };
 
-/* function createTable(){
+
+ function createTable(){
     for(let i = 0; i < 126; i++){
         let number = i + 1;
         let li = document.createElement("li");
-        let element = "element" + number;
-        if(number > 1 && number < 18){
-            li.setAttribute("id", element);
+
+        if(number < 2){
+            li.setAttribute("data-id", number);
+            li.setAttribute("id", "element" + number);
+        }else if (number >= 18 && number <= 20){
+            let numberMinus = number - 16;
+            li.setAttribute("data-id", numberMinus);
+            li.setAttribute("id", "element" + numberMinus);
+        }else if (number >= 31 && number <= 38){
+            let numberMinus2 = number - 26;
+            li.setAttribute("data-id", numberMinus2);
+            li.setAttribute("id", "element" + numberMinus2);
+        }else if (number >= 49 && number <= 93){
+            let numberMinus3 = number - 36;
+            li.setAttribute("data-id", numberMinus3);
+            li.setAttribute("id", "element" + numberMinus3);
+        }else if (number >= 94 && number <= 111){
+            let numberMinus4 = number - 22;
+            li.setAttribute("data-id", numberMinus4);
+            li.setAttribute("id", "element" + numberMinus4);
+        }else if(number >= 112 && number <= 126){
+            let numberMinus5 = number - 8;
+            li.setAttribute("data-id", numberMinus5);
+            li.setAttribute("id", "element" + numberMinus5);
         }else{
-            li.setAttribute("id", element);
+            li.setAttribute("class", "emptBlock");
         }; 
     }
-} */
+} 
 
-/* fetch("https://periodic-table-of-elements.p.rapidapi.com/elements", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "eb6e5ab689mshc4df250f16a2797p141cc9jsnf79302459340",
-		"x-rapidapi-host": "periodic-table-of-elements.p.rapidapi.com"
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.error(err);
-});
- */
-const data = null;
-
-const xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function () {
-	if (this.readyState === this.DONE) {
-		console.log(this.responseText);
-	}
-});
-
-xhr.open("GET", "https://periodic-table-of-elements.p.rapidapi.com/elements");
-xhr.setRequestHeader("x-rapidapi-key", "eb6e5ab689mshc4df250f16a2797p141cc9jsnf79302459340");
-xhr.setRequestHeader("x-rapidapi-host", "periodic-table-of-elements.p.rapidapi.com");
-
-xhr.send(data);

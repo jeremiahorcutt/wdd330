@@ -33,6 +33,18 @@ window.onload = function() {
             let iMinus5 = i - 8;
             li.setAttribute("data-id", iMinus5);
             li.setAttribute("id", "element" + i);
+        }else if (i == 5){
+            li.innerText = "Metal";
+            li.setAttribute("class", "emptyBlock");
+            li.setAttribute("id", "element" + i);
+        }else if (i == 7){
+            li.innerText = "Nonmetal";
+            li.setAttribute("class", "emptyBlock");
+            li.setAttribute("id", "element" + i);
+        }else if (i == 9){
+            li.innerText = "Metalloid";
+            li.setAttribute("class", "emptyBlock");
+            li.setAttribute("id", "element" + i);
         }else{
             li.setAttribute("class", "emptyBlock");
             li.setAttribute("id", "element" + i);

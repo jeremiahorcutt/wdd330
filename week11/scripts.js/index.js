@@ -119,6 +119,7 @@ for(let i = 1; i <= 18; i++){
 }
 }
 
+//takes information from the JSON file and populates the periodic table
 function populateTable(data){
     let array = data['elements'];
     for(let i = 0; i < array.length; i++){

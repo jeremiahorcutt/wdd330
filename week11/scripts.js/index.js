@@ -1,5 +1,5 @@
 
-let requestURL = 'https://jeremiahorcutt.github.io/wdd330/week11/elements.JSON';
+let requestURL = 'https://jeremiahorcutt.github.io/wdd330/week11/elements.json';
 let request = new XMLHttpRequest();
 
 request.open('GET', requestURL);

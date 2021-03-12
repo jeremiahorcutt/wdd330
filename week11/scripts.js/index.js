@@ -43,17 +43,22 @@ window.onload = function() {
             li.setAttribute("data-id", iMinus5);
             li.setAttribute("id", "element" + i);
         }else if (i == 5){
-            li.innerText = "Metal";
-            li.setAttribute("class", "emptyBlock");
+            let h3 = document.createElement('h3');
+            h3.innerText = "Metal";
             li.setAttribute("id", "element" + i);
+            li.appendChild(h3);
         }else if (i == 7){
-            li.innerText = "Nonmetal";
+            let h3 = document.createElement('h3');
+            h3.innerText = "Nonmental";
             li.setAttribute("class", "emptyBlock");
             li.setAttribute("id", "element" + i);
+            li.appendChild(h3);
         }else if (i == 9){
-            li.innerText = "Metalloid";
+            let h3 = document.createElement('h3');
+            h3.innerText = "Metalloid";
             li.setAttribute("class", "emptyBlock");
             li.setAttribute("id", "element" + i);
+            li.appendChild(h3);
         }else{
             li.setAttribute("class", "emptyBlock");
             li.setAttribute("id", "element" + i);
@@ -122,19 +127,21 @@ for(let i = 1; i <= 18; i++){
 //takes information from the JSON file and populates the periodic table
 function populateTable(data){
     let array = data['elements'];
-    for(let i = 0; i < array.length; i++){
-    let id = i + 1;
-    let block = document.getElementById("element" + id);
-    let blockId = block.getAttribute("data-id");
-    if(blockId == array[i].number){
+    for(let i = 0; i < 126; i++){
+      let id = i + 1;
+      let block = document.getElementById("element" + id);
+      let blockId = block.getAttribute("data-id");
+    for(let j = 0; j < array.length; j++){
+      if(blockId == array[j].number){
        let h2 = document.createElement("h2");
        let p = document.createElement("p");
        h2.classList.add("elementH2");
        p.classList.add("elementName");
-       h2.innerHTML = array[i].symbol;
-       p.innerHTML = array[i].name;
+       h2.innerHTML = array[j].symbol;
+       p.innerHTML = array[j].name;
        block.appendChild(h2);
        block.appendChild(p);
+      }
     }
     }
 };

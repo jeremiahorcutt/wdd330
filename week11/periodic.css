@@ -109,6 +109,10 @@ ul li{
     background-image: linear-gradient(
         180deg
         , rgba(106,4,15,1.00) 0%, rgba(55,6,23,1.00) 100%);
+    text-align:center;
+}
+ul li p{
+    font-size:11px;
 }
 .emptyBlock{
     border:none;
@@ -146,4 +150,58 @@ ul li{
         , rgba(255,186,8,1.00) 0%, rgba(250,163,7,1.00) 100%);
         border:1px solid white;
         text-align: center;
+}
+ul li:hover{
+    filter: sepia(100%);
+}
+ul li:active{
+    filter: drop-shadow(-2px 2px 20px white);
+}
+#element5:hover, #element7:hover, #element9:hover{
+    filter:none;
+}
+#element5:active, #element7:active, #element9:active{
+    filter:none;
+}
+ul li h3{
+    font-size:14px;
+    text-decoration:underline;
+    margin-top:40%;
+}
+footer{
+    background-color:#2b2a2a;
+    width:100.9%;
+    position:relative;
+    top:35px;
+    left:-10px;
+    min-height:50px;
+    text-align:center;
+}
+footer p{
+    position:relative;
+    bottom:-15px
+}
+#displayBondDiv{
+    display:flex;
+    flex-direction:row;
+    background-image: linear-gradient(
+        180deg
+        , rgba(78,140,182,1.00) 0%, rgba(0,86,145,1.00) 100%);
+    margin:0 auto;
+    max-width:900px;
+    padding:25px;
+    box-shadow:5px 5px 8px black;
+    border-radius:10px;
+}
+#elementDiv1, #elementDiv2{
+    width:300px;
+    height:300px;
+    border:solid white 2px;
+}
+#bondDiv{
+    width:50%;
+}
+#bondDiv h4{
+    background: -webkit-linear-gradient(#9D0208, #6A040F);
+    
 }

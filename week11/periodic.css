@@ -225,6 +225,7 @@ footer p{
         overflow:auto;
         border:none;
         background-color:#5c5c5c;
+        margin-left:auto;
     }
     #displayBondDiv{
         display:flex;

@@ -1,5 +1,5 @@
 
-let requestURL = 'https://github.com/Bowserinator/Periodic-Table-JSON/blob/master/PeriodicTableJSON.json';
+let requestURL = 'https://jeremiahorcutt.github.io/wdd330/week11/elements.JSON';
 let request = new XMLHttpRequest();
 
 request.open('GET', requestURL);

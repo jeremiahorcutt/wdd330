@@ -1,9 +1,18 @@
 
+let requestURL = 'https://github.com/Bowserinator/Periodic-Table-JSON/blob/master/PeriodicTableJSON.json';
+let request = new XMLHttpRequest();
+
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
 
 window.onload = function() {
+    //loadDoc();
+    let data = request.response;
     createTable();
     groupRows();
     groupColumns();
+    populateTable(data);
   };
 
 
@@ -109,3 +118,20 @@ for(let i = 1; i <= 18; i++){
       x7 += 1;
 }
 }
+
+function populateTable(data){
+    let array = data['elements'];
+    for(let i = 0; i < array.length; i++){
+    let block = document.getElementById("#element"+i);
+    let blockId = block.getAttribute("data-id");
+    if(blockId == array[i].number){
+       let h1 = document.createElement("h1");
+       let p = document.createElement("p");
+       h1.classList.add("elementH1");
+       p.classList.add("elementName");
+       h1.innerHTML = array[i].symbol;
+       p.innerHTML = array[i].name;
+       block.appendChild(h1);
+    }
+    }
+};

@@ -134,6 +134,7 @@ function populateTable(data){
        h2.innerHTML = array[i].symbol;
        p.innerHTML = array[i].name;
        block.appendChild(h2);
+       block.appendChild(p);
     }
     }
 };

@@ -122,7 +122,8 @@ for(let i = 1; i <= 18; i++){
 function populateTable(data){
     let array = data['elements'];
     for(let i = 0; i < array.length; i++){
-    let block = document.getElementById("#element"+i);
+    let id = i + 1;
+    let block = document.getElementById("#element" + id);
     let blockId = block.getAttribute("data-id");
     if(blockId == array[i].number){
        let h1 = document.createElement("h1");

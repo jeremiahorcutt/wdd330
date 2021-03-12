@@ -130,7 +130,7 @@ function populateTable(data){
        let p = document.createElement("p");
        h2.classList.add("elementH2");
        p.classList.add("elementName");
-       h1.innerHTML = array[i].symbol;
+       h2.innerHTML = array[i].symbol;
        p.innerHTML = array[i].name;
        block.appendChild(h1);
     }

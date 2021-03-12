@@ -182,14 +182,14 @@ footer{
     background-color:#2b2a2a;
     width:100.9%;
     position:relative;
-    top:35px;
+    top:40px;
     left:-10px;
     min-height:50px;
     text-align:center;
 }
 footer p{
     position:relative;
-    bottom:-15px
+    bottom:-10px;
 }
 #displayBondDiv{
     display:block;
@@ -236,5 +236,9 @@ footer p{
     }
     footer{
         width: 105%;
+        top:35px;
+    }
+    footer p{
+        bottom: -15px;
     }
 }

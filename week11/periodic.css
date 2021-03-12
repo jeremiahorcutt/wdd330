@@ -27,7 +27,6 @@ header{
     margin:0 auto;
     border:5px solid #2b2a2a;
     background-color:#444343;
-    margin-left: 3px;
 }
 #periodicGrid{
     display:grid;
@@ -234,5 +233,8 @@ footer p{
     }
     header{
         width:100.9%;
+    }
+    footer{
+        width: 105%;
     }
 }

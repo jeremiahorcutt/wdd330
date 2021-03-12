@@ -126,9 +126,9 @@ function populateTable(data){
     let block = document.getElementById("element" + id);
     let blockId = block.getAttribute("data-id");
     if(blockId == array[i].number){
-       let h1 = document.createElement("h1");
+       let h2 = document.createElement("h2");
        let p = document.createElement("p");
-       h1.classList.add("elementH1");
+       h2.classList.add("elementH2");
        p.classList.add("elementName");
        h1.innerHTML = array[i].symbol;
        p.innerHTML = array[i].name;

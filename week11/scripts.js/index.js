@@ -132,7 +132,7 @@ function populateTable(data){
        p.classList.add("elementName");
        h2.innerHTML = array[i].symbol;
        p.innerHTML = array[i].name;
-       block.appendChild(h1);
+       block.appendChild(h2);
     }
     }
 };

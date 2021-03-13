@@ -15,7 +15,7 @@ window.onload = function() {
     populateTable(data);
   };
 
-
+//function for creating the li elements of the periodic table and assigning them identifiers
  function createTable(){
     for(let i = 1; i < 127; i++){
         let li = document.createElement("li");

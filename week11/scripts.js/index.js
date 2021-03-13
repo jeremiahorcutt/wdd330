@@ -18,7 +18,6 @@ window.onload = function() {
     //loadDoc
     let data = request.response;
     populateTable(data);
-    
   };
 
 //function for creating the li elements of the periodic table and assigning them identifiers

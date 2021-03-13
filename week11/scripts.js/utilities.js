@@ -1,6 +1,6 @@
 
 function elementSelect(e){
-    const elementNumber = e.target.data('id');
+    const elementNumber = e.target.dataset.id;
     console.log(elementNumber);
 }
 

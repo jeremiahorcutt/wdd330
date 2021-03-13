@@ -10,13 +10,13 @@ function getBlockId(e){
 function elementCheck(){
   let element1 = document.getElementById("element1Sym");
   let element2 = document.getElementById("element2Sym");
-  if (element1 && element2){
+  if(element1 && element2){
       return 2;
   }else if(!element1 && element2){
       return 0;
   }else if(element1 && !element2){
       return 1;
-  }
+  };
 };
 
 //creates the display for the display div elements

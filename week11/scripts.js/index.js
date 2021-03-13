@@ -42,18 +42,18 @@ window.onload = function() {
             let iMinus5 = i - 8;
             li.setAttribute("data-id", iMinus5);
             li.setAttribute("id", "element" + i);
-        }else if (i == 5){
+        }else if (i == 5){//this block sets an id to the metal guide block
             let h3 = document.createElement('h3');
             h3.innerText = "Metal";
             li.setAttribute("id", "element" + i);
             li.appendChild(h3);
-        }else if (i == 7){
+        }else if (i == 7){//this block sets an id to the nonmetal guide block
             let h3 = document.createElement('h3');
             h3.innerText = "Nonmental";
             li.setAttribute("class", "emptyBlock");
             li.setAttribute("id", "element" + i);
             li.appendChild(h3);
-        }else if (i == 9){
+        }else if (i == 9){//this block sets an id to the metalloid guide block
             let h3 = document.createElement('h3');
             h3.innerText = "Metalloid";
             li.setAttribute("class", "emptyBlock");

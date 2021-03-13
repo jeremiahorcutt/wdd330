@@ -141,7 +141,9 @@ function populateTable(data){
        let h2 = document.createElement("h2");
        let p = document.createElement("p");
        h2.classList.add("elementH2");
+       h2.setAttribute('data-id', blockId);
        p.classList.add("elementName");
+       p.setAttribute('data-id', blockId);
        h2.innerHTML = array[j].symbol;
        p.innerHTML = array[j].name;
        block.appendChild(h2);

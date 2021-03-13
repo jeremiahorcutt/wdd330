@@ -1,4 +1,4 @@
-import utils from './utilities';
+import utils from './utilities.js';
 
 //JSON fetch
 let requestURL = 'https://jeremiahorcutt.github.io/wdd330/week11/elements.json';
@@ -15,7 +15,7 @@ window.onload = function() {
     createTable();
     groupRows();
     groupColumns();
-    //loadDoc(); 
+    //loadDoc
     let data = request.response;
     populateTable(data);
   };

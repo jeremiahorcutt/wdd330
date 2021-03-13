@@ -19,6 +19,7 @@ window.onload = function() {
     populateTable(data);
   };
  
+  let data = request.response;
   window.addEventListener('click', utils.elementSelect(data));
   window.addEventListener('touchend', utils.elementSelect(data));
 //function for creating the li elements of the periodic table and assigning them identifiers

@@ -8,8 +8,8 @@ request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
 
-window.addEventListener('click', utils.elementSelect);
-window.addEventListener('touchend', utils.elementSelect);
+window.addEventListener('click', utils.elementSelect(data));
+window.addEventListener('touchend', utils.elementSelect()data);
 
 window.onload = function() {
     createTable();

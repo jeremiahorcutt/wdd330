@@ -7,11 +7,11 @@ request.responseType = 'json';
 request.send();
 
 window.onload = function() {
-    //loadDoc();
-    let data = request.response;
+    //loadDoc(); 
     createTable();
     groupRows();
     groupColumns();
+    let data = request.response;
     populateTable(data);
   };
 

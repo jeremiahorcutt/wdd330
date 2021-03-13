@@ -8,8 +8,7 @@ request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
 
-window.addEventListener('click', utils.elementSelect(data));
-window.addEventListener('touchend', utils.elementSelect(data));
+
 
 window.onload = function() {
     createTable();
@@ -19,7 +18,9 @@ window.onload = function() {
     let data = request.response;
     populateTable(data);
   };
-
+ 
+  window.addEventListener('click', utils.elementSelect(data));
+  window.addEventListener('touchend', utils.elementSelect(data));
 //function for creating the li elements of the periodic table and assigning them identifiers
  function createTable(){
     for(let i = 1; i < 127; i++){

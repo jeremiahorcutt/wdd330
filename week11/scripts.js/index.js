@@ -1,3 +1,5 @@
+import utils from './utilities';
+
 //JSON fetch
 let requestURL = 'https://jeremiahorcutt.github.io/wdd330/week11/elements.json';
 let request = new XMLHttpRequest();
@@ -5,6 +7,9 @@ let request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
+
+window.addEventListener('click', utils.elementSelect);
+window.addEventListener('touchend', utils.elementSelect);
 
 window.onload = function() {
     createTable();

@@ -1,4 +1,4 @@
-
+//JSON fetch
 let requestURL = 'https://jeremiahorcutt.github.io/wdd330/week11/elements.json';
 let request = new XMLHttpRequest();
 
@@ -7,10 +7,10 @@ request.responseType = 'json';
 request.send();
 
 window.onload = function() {
-    //loadDoc(); 
     createTable();
     groupRows();
     groupColumns();
+    //loadDoc(); 
     let data = request.response;
     populateTable(data);
   };

@@ -1,7 +1,10 @@
 
 function elementSelect(e){
     const elementNumber = e.target.dataset.id;
-    console.log(elementNumber);
+    
+    if(elementNumber != 'undefined'){
+        console.log(elementNumber);
+    }
 }
 
 export default{

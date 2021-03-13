@@ -1,7 +1,7 @@
 
 function elementSelect(e){
     const elementNumber = e.target.dataset.id;
-    if(elementNumber != 'undefined'){
+    if(elementNumber){
         console.log(elementNumber);
     }
 }

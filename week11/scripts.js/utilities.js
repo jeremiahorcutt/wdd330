@@ -1,8 +1,8 @@
 //gets the id of the selected element if it has one
-function getBlockId(e){
+function getBlockId(e, data){
     const elementNumber = e.target.dataset.id;
     if(elementNumber){
-    return elementNumber;
+    elementSelect(elementNumber, data);
     }
 }
 
@@ -45,8 +45,7 @@ function elementDisplay(data, num, blockId){
 };
 
 //primary function that calls secondary functions and orginizes the data
-function elementSelect(data){
-    let blockId = getBlockId();
+function elementSelect(blockId, data){
     let elementCheck = elementCheck();
     if (elementCheck == 0){
      elementDisplay(data, 1, blockId);
@@ -58,5 +57,5 @@ function elementSelect(data){
 }
 
 export default{
-    elementSelect
+    getBlockId
 };

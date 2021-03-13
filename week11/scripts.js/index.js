@@ -16,8 +16,11 @@ window.onload = function() {
     groupRows();
     groupColumns();
     //loadDoc
+    
     let data = request.response;
+    if(data['elements' != "undefined"]){
     populateTable(data);
+    }
   };
 
 //function for creating the li elements of the periodic table and assigning them identifiers

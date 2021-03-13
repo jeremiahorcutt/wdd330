@@ -1,8 +1,8 @@
 //gets the id of the selected element if it has one
-function getBlockId(e, data){
+function getBlockId(e){
     const elementNumber = e.target.dataset.id;
     if(elementNumber){
-    elementSelect(elementNumber, data);
+    elementSelect(elementNumber);
     }
 }
 

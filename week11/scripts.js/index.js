@@ -20,8 +20,8 @@ window.onload = function() {
   };
  
   let data = request.response;
-  window.addEventListener('click', utils.getBlockId(data));
-  window.addEventListener('touchend', utils.getBlockId(data));
+  window.addEventListener('click', utils.getBlockId);
+  //window.addEventListener('touchend', utils.getBlockId(data));
 //function for creating the li elements of the periodic table and assigning them identifiers
  function createTable(){
     for(let i = 1; i < 127; i++){

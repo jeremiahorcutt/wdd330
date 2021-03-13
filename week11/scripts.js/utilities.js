@@ -4,6 +4,6 @@ function elementSelect(e){
     console.log(elementNumber);
 }
 
-export {
+export default {
     elementSelect
 };

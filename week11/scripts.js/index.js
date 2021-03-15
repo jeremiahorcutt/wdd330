@@ -15,7 +15,7 @@ window.onload = function() {
     groupRows();
     groupColumns();
     //loadDoc
-    let data = request.response;
+    let data = JSON.parse(elements);
     populateTable(data);
   };
  

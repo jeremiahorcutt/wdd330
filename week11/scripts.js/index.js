@@ -162,33 +162,35 @@ function populateTable(data){
 };
 
 //creates the display for the display div elements
-function elementDisplay( num, blockId){
+function elementDisplay(num, blockId){
   let newElement = document.getElementById('elementDiv' + num);
+  let data = request.response;
   let array = data['elements'];
   let symbol = document.createElement('h4');
   symbol.setAttribute("id", "element" + num + "Sym");
-  symbol.innerHTML = array.symbol[blockId];
+  symbol.innerHTML = array[blockId].symbol;
   let name = document.createElement('h5');
-  name.innerHTML = array.name[blockId];
+  name.innerHTML = array[blockId].name;
   let number = document.createElement('p');
-  number.innerHTML = array.number[blockId];
+  number.innerHTML = array[blockId].number;
   let weight = document.createElement('p');
-  weight.innerHTML = array.weight[blockId];
+  weight.innerHTML = array[blockId].weight;
   let discovered = document.createElement('p');
-  discovered.innerHTML = array.discovered_by[blockId];
-  newElement.appendChildren(symbol,name,number,weight,discovered);
-  if(array.metallic_state == "metal"){
+  discovered.innerHTML = array[blockId].discovered_by;
+  newElement.append(symbol,name,number,weight,discovered);
+  if(array[blockId].metallic_state == "metal"){
      newElement.style.backgroundImage = "linear-gradient(180deg, rgba(106,4,15,1.00) 0%, rgba(55,6,23,1.00) 100%)";
-  }else if(array.metallic_state == "nonmetal"){
+  }else if(array[blockId].metallic_state == "nonmetal"){
     newElement.style.backgroundImage = "linear-gradient(180deg, rgba(220,47,2,1.00) 0%, rgba(208,0,0,1.00) 100%)";
-  }else if(array.metallic_state == "metalloid"){
+  }else if(array[blockId].metallic_state == "metalloid"){
     newElement.style.backgroundImage = "linear-gradient(180deg, rgba(255,186,8,1.00) 0%, rgba(250,163,7,1.00) 100%)";
   }
 };
 
 //primary function that calls secondary functions and orginizes the data
-function elementSelect(){
-    let blockId = utils.getBlockId();
+function elementSelect(e){
+    let arrayId = utils.getBlockId(e);
+    let blockId = arrayId - 1;
     let elementCh = utils.elementCheck();
     if (elementCh == 0){
      elementDisplay( 1, blockId);

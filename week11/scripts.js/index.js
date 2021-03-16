@@ -1,13 +1,14 @@
 import utils from './utilities.js';
 import ls from './ls.js';
 //JSON fetch
-
-let requestURL = 'https://jeremiahorcutt.github.io/wdd330/week11/elements.json';
-let request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
-
+const requestURL = 'https://jeremiahorcutt.github.io/wdd330/week11/elements.json';
+fetch(requestURL)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (jsonObject) {
+    populateTable(jsonObject);
+      });
 
 const table = document.getElementById('periodicContainer');
 table.addEventListener('click', newElement);
@@ -16,12 +17,9 @@ window.onload = function() {
     createTable();
     groupRows();
     groupColumns();
-    
-    let data = request.response;
-    populateTable(data);
     loadElements();
   };
-
+ 
   //window.addEventListener('touchend', utils.getBlockId(data));
 //function for creating the li elements of the periodic table and assigning them identifiers
  function createTable(){
@@ -162,7 +160,7 @@ function populateTable(data){
     }
 };
 
-function newElement(){
+function newElement(e){
   const elementNumber = e.target.dataset.id;
   const element = createElement(elementNumber);
   const elementDiv = elementDisplay(element);

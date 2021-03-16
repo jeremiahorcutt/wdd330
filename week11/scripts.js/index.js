@@ -1,26 +1,26 @@
 import utils from './utilities.js';
 
 //JSON fetch
+
 let requestURL = 'https://jeremiahorcutt.github.io/wdd330/week11/elements.json';
 let request = new XMLHttpRequest();
-
 request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
 
 
 
+window.addEventListener('click', elementSelect);
+
 window.onload = function() {
     createTable();
     groupRows();
     groupColumns();
-    //loadDoc
-    let data = JSON.parse(elements);
+    let data = request.response;
+
     populateTable(data);
   };
- 
-  let data = request.response;
-  window.addEventListener('click', utils.getBlockId);
+
   //window.addEventListener('touchend', utils.getBlockId(data));
 //function for creating the li elements of the periodic table and assigning them identifiers
  function createTable(){
@@ -29,26 +29,32 @@ window.onload = function() {
         if(i < 2){
             li.setAttribute("data-id", i);
             li.setAttribute("id", "element" + i);
+            li.setAttribute("class", "block");
         }else if (i >= 18 && i <= 20){
             let iMinus = i - 16;
             li.setAttribute("data-id", iMinus);
             li.setAttribute("id", "element" + i);
+            li.setAttribute("class", "block");
         }else if (i >= 31 && i <= 38){
             let iMinus2 = i - 26;
             li.setAttribute("data-id", iMinus2);
             li.setAttribute("id", "element" + i);
+            li.setAttribute("class", "block");
         }else if (i >= 49 && i <= 93){
             let iMinus3 = i - 36;
             li.setAttribute("data-id", iMinus3);
             li.setAttribute("id", "element" + i);
+            li.setAttribute("class", "block");
         }else if (i >= 94 && i <= 111){
             let iMinus4 = i - 22;
             li.setAttribute("data-id", iMinus4);
             li.setAttribute("id", "element" + i);
+            li.setAttribute("class", "block");
         }else if(i >= 112 && i <= 126){
             let iMinus5 = i - 8;
             li.setAttribute("data-id", iMinus5);
             li.setAttribute("id", "element" + i);
+            li.setAttribute("class", "block");
         }else if (i == 5){//this block sets an id to the metal guide block
             let h3 = document.createElement('h3');
             h3.innerText = "Metal";
@@ -154,3 +160,42 @@ function populateTable(data){
     }
     }
 };
+
+//creates the display for the display div elements
+function elementDisplay( num, blockId){
+  let newElement = document.getElementById('elementDiv' + num);
+  let array = data['elements'];
+  let symbol = document.createElement('h4');
+  symbol.setAttribute("id", "element" + num + "Sym");
+  symbol.innerHTML = array.symbol[blockId];
+  let name = document.createElement('h5');
+  name.innerHTML = array.name[blockId];
+  let number = document.createElement('p');
+  number.innerHTML = array.number[blockId];
+  let weight = document.createElement('p');
+  weight.innerHTML = array.weight[blockId];
+  let discovered = document.createElement('p');
+  discovered.innerHTML = array.discovered_by[blockId];
+  newElement.appendChildren(symbol,name,number,weight,discovered);
+  if(array.metallic_state == "metal"){
+     newElement.style.backgroundImage = "linear-gradient(180deg, rgba(106,4,15,1.00) 0%, rgba(55,6,23,1.00) 100%)";
+  }else if(array.metallic_state == "nonmetal"){
+    newElement.style.backgroundImage = "linear-gradient(180deg, rgba(220,47,2,1.00) 0%, rgba(208,0,0,1.00) 100%)";
+  }else if(array.metallic_state == "metalloid"){
+    newElement.style.backgroundImage = "linear-gradient(180deg, rgba(255,186,8,1.00) 0%, rgba(250,163,7,1.00) 100%)";
+  }
+};
+
+//primary function that calls secondary functions and orginizes the data
+function elementSelect(){
+    let blockId = utils.getBlockId();
+    let elementCh = utils.elementCheck();
+    if (elementCh == 0){
+     elementDisplay( 1, blockId);
+    }else if(elementCh == 1){
+     elementDisplay( 2, blockId);
+    }else if (elementCh == 2){
+     alert('Please remove one of the elements from the display.')
+    };
+}
+

@@ -173,11 +173,16 @@ function elementDisplay(num, blockId){
   name.innerHTML = array[blockId].name;
   let number = document.createElement('p');
   number.innerHTML = array[blockId].number;
+  number.setAttribute("class", "elNumber");
   let weight = document.createElement('p');
-  weight.innerHTML = array[blockId].weight;
+  weight.innerHTML = `Atomic Mass: ${array[blockId].atomic_mass}`;
+  let boil = document.createElement('p');
+  boil.innerHTML = `Boiling Point: ${array[blockId].boil}`;
+  let melt = document.createElement('p');
+  melt.innerHTML = `Melting Point: ${array[blockId].melt}`;
   let discovered = document.createElement('p');
-  discovered.innerHTML = array[blockId].discovered_by;
-  newElement.append(symbol,name,number,weight,discovered);
+  discovered.innerHTML = `Discovered by: ${array[blockId].discovered_by}`;
+  newElement.append(symbol,name,number,weight,discovered,boil,melt);
   if(array[blockId].metallic_state == "metal"){
      newElement.style.backgroundImage = "linear-gradient(180deg, rgba(106,4,15,1.00) 0%, rgba(55,6,23,1.00) 100%)";
   }else if(array[blockId].metallic_state == "nonmetal"){

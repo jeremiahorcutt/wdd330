@@ -1,28 +1,28 @@
-function saveTodo(todo){
-    const toDoList = getTodoList();
+function saveElements(element){
+    const elementList = getElementList();
   
-    toDoList.push(todo);
-    localStorage.setItem('toDoList', JSON.stringify(toDoList));
+    elementList.push(element);
+    localStorage.setItem('elementList', JSON.stringify(elementList));
   };
   
-  function deleteTodo(id){
-      const toDoList = getTodoList();
-      const updatedTodos = toDoList.filter( todo => todo.id != id)
-      localStorage.setItem('toDoList', JSON.stringify(updatedTodos));
+  function deleteElement(id){
+      const elementList = getElementList();
+      const updatedElements = elementList.filter( element => element.id != id)
+      localStorage.setItem('elemntList', JSON.stringify(updatedElements));
   };
   
-  function getTodoList(){
-      const todoListString = localStorage.getItem('toDoList');
-      let todoList = [];
+  function getElementList(){
+      const elementString = localStorage.getItem('elementList');
+      let elementList = [];
   
-      if (todoListString) {
-          todoList = JSON.parse(todoListString);
+      if (elementString) {
+        elementList = JSON.parse(elementString);
       }
-      return todoList;
+      return elementList;
   }
   
   export default{
-    saveTodo,
-    getTodoList,
-    deleteTodo
+    saveElements,
+    getElementList,
+    deleteElement
   }

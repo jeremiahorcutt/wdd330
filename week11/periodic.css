@@ -8,10 +8,31 @@ h1{
     font-size:3em;
     margin-top:7px;
     margin-left:15px;
-    background: -webkit-linear-gradient(#4e8cb6, #005691);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: #005691 -webkit-gradient(linear, 100% 0, 0 0, from(#005691), color-stop(0.5,  #4e8cb6), to(#005691));
+    background-position: -4rem top; /*50px*/
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation-name: shimmer;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-background-size: 4rem 100%; /*50px*/
 }
+
+@-webkit-keyframes shimmer {
+    0% {
+        background-position: -4rem top; /*50px*/
+    }
+
+    60% {
+        background-position: 12.5rem top; /*200px*/
+    }
+
+    100% {
+        background-position: 16rem top; /*200px*/
+    }
+}
+
 header{
     background-color:#2b2a2a;
     width:105%;
@@ -220,7 +241,7 @@ footer p{
 h4{
     font-size: 3em;
     margin-bottom: 1px;
-    margin-top: 5px;
+    margin-top:0;
 }
 
 h5{
@@ -234,6 +255,23 @@ h5{
     top: -145px;
     font-size: 25px;
     margin-right: 5px;
+}
+#elementDiv1 div, #elementDiv2 div{
+    height:100%;
+    margin:0;
+}
+#elementDiv1 input, #elementDiv2 input{
+    background-color: white;
+    border:none;
+    border-radius:25px;
+    width:25px;
+    height:25px;
+    float:left;
+    margin-left:5px;
+    top:-238px;
+    position:relative;
+    font-weight:bold;
+    font-size:15px;
 }
 
 

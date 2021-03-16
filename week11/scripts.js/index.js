@@ -1,5 +1,5 @@
 import utils from './utilities.js';
-
+import ls from './ls.js';
 //JSON fetch
 
 let requestURL = 'https://jeremiahorcutt.github.io/wdd330/week11/elements.json';
@@ -9,16 +9,17 @@ request.responseType = 'json';
 request.send();
 
 
-
-window.addEventListener('click', elementSelect);
+const table = document.getElementById('periodicContainer');
+table.addEventListener('click', newElement);
 
 window.onload = function() {
     createTable();
     groupRows();
     groupColumns();
+    
     let data = request.response;
-
     populateTable(data);
+    loadElements();
   };
 
   //window.addEventListener('touchend', utils.getBlockId(data));
@@ -161,48 +162,85 @@ function populateTable(data){
     }
 };
 
+function newElement(){
+  const elementNumber = e.target.dataset.id;
+  const element = createElement(elementNumber);
+  const elementDiv = elementDisplay(element);
+  elementSelect(elementDiv);
+  ls.saveElement(element);
+}
+
+function createElement(dataId){
+  const newElement = { id: Date.now(), dataid: dataId}
+  return newElement;
+}
+
+
+
 //creates the display for the display div elements
-function elementDisplay(num, blockId){
-  let newElement = document.getElementById('elementDiv' + num);
+function elementDisplay(el){
+  let newElement = document.createElement("div");
+  let elNum = el.dataid + 1;
   let data = request.response;
   let array = data['elements'];
   let symbol = document.createElement('h4');
-  symbol.setAttribute("id", "element" + num + "Sym");
-  symbol.innerHTML = array[blockId].symbol;
+  symbol.innerHTML = array[elNum].symbol;
   let name = document.createElement('h5');
-  name.innerHTML = array[blockId].name;
+  name.innerHTML = array[elNum].name;
   let number = document.createElement('p');
-  number.innerHTML = array[blockId].number;
+  number.innerHTML = array[elNum].number;
   number.setAttribute("class", "elNumber");
   let weight = document.createElement('p');
-  weight.innerHTML = `Atomic Mass: ${array[blockId].atomic_mass}`;
+  weight.innerHTML = `Atomic Mass: ${array[elNum].atomic_mass}`;
   let boil = document.createElement('p');
-  boil.innerHTML = `Boiling Point: ${array[blockId].boil}`;
+  boil.innerHTML = `Boiling Point: ${array[elNum].boil}`;
   let melt = document.createElement('p');
-  melt.innerHTML = `Melting Point: ${array[blockId].melt}`;
-  let discovered = document.createElement('p');
-  discovered.innerHTML = `Discovered by: ${array[blockId].discovered_by}`;
-  newElement.append(symbol,name,number,weight,discovered,boil,melt);
-  if(array[blockId].metallic_state == "metal"){
+  melt.innerHTML = `Melting Point: ${array[elNum].melt}`;
+  let deleteBtn = document.createElement('input');
+  deleteBtn.setAttribute("type", "button");
+  deleteBtn.setAttribute("class", `deleteBtn`);
+  deleteBtn.setAttribute("value", "X");
+  deleteBtn.onclick = removeElement;
+  newElement.append(symbol,name,number,weight,boil,melt,deleteBtn);
+  if(array[elNum].metallic_state == "metal"){
      newElement.style.backgroundImage = "linear-gradient(180deg, rgba(106,4,15,1.00) 0%, rgba(55,6,23,1.00) 100%)";
-  }else if(array[blockId].metallic_state == "nonmetal"){
+  }else if(array[elNum].metallic_state == "nonmetal"){
     newElement.style.backgroundImage = "linear-gradient(180deg, rgba(220,47,2,1.00) 0%, rgba(208,0,0,1.00) 100%)";
-  }else if(array[blockId].metallic_state == "metalloid"){
+  }else if(array[elNum].metallic_state == "metalloid"){
     newElement.style.backgroundImage = "linear-gradient(180deg, rgba(255,186,8,1.00) 0%, rgba(250,163,7,1.00) 100%)";
   }
+  return newElement;
 };
 
 //primary function that calls secondary functions and orginizes the data
-function elementSelect(e){
-    let arrayId = utils.getBlockId(e);
-    let blockId = arrayId - 1;
+function elementSelect(element){
     let elementCh = utils.elementCheck();
+    const container1 = document.getElementById('elementDiv1');
+    const container2 = document.getElementById('elementDiv2');
     if (elementCh == 0){
-     elementDisplay( 1, blockId);
+       container1.appendChild(element);
     }else if(elementCh == 1){
-     elementDisplay( 2, blockId);
+       container2.appendChild(element);
     }else if (elementCh == 2){
      alert('Please remove one of the elements from the display.')
     };
 }
 
+//removes elements from the display divs
+function removeElement(newElement){
+    console.log(newElement);
+    newElement.remove();
+};
+
+function loadElements(){
+  const elementList = ls.getElementList();
+  elementList.forEach(element => {
+    const el = createElementDiv(element);
+    addToList(el);
+  })
+}
+
+function createElementDiv(element){
+    const div = document.createElement('div');
+    div.setAttribute('id', element.id + 'div')
+};

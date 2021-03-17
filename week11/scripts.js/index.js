@@ -256,17 +256,18 @@ function loadElements(){
 
 function removeElement(e){
   const btn = e.currentTarget;
+  let id = btn.getAttribute('data-id');
   ls.deleteElement(btn.getAttribute('data-id'));
-  let id = btn.getAttribute('data-id')
   clearDisplay(id);
-  loadElements();
 }
 
 function clearDisplay(id){
   const element = document.getElementById('deleteBtn' + id).parentElement;
   const bond = document.querySelector('#bondDiv h4');
-  bond.remove();
   element.remove();
+  if(bond){
+  bond.remove();
+}
 }
 
 async function bondDisplay(){

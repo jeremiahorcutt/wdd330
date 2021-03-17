@@ -273,28 +273,28 @@ async function bondDisplay(dataid){
       let type1 = array[idInt].metallic_state;
       let type2 = array[id2Int].metallic_state;
       let bond = document.createElement("h4");
-       if (type1  == "Metal"){
-          if(type2 == "Metal"){
+       if (type1  == "metal"){
+          if(type2 == "metal"){
             bond.innerHTML = "Metallic Bond";
-          }else if(type2 == "Nonmetal"){
+          }else if(type2 == "nonmetal"){
             bond.innerHTML = "Ionic Bond";
-          }else if(type2 == "Metalloid"){
+          }else if(type2 == "metalloid"){
             bond.innerHTML = "Metallic Bond";
           }
-      }else if(type1 == "Nonmental"){
-          if(type2 == "Metal"){
+      }else if(type1 == "nonmetal"){
+          if(type2 == "metal"){
             bond.innerHTML = "Metalloid";
-          }else if(type2 == "Nonmetal"){
+          }else if(type2 == "nonmetal"){
             bond.innerHTML = "Covalent Bond";
-          }else if(type2 == "Metalloid"){
+          }else if(type2 == "metalloid"){
             bond.innerHTML = "Covalent Bond";
         } 
-      }else if(type1 == "Metalloid"){
-          if(type2 == "Metal"){
+      }else if(type1 == "metalloid"){
+          if(type2 == "metal"){
             bond.innerHTML = "Metallic Bond";
-          }else if(type2 == "Nonmetal"){
+          }else if(type2 == "nonmetal"){
             bond.innerHTML = "Covalent Bond";
-          }else if(type2 == "Metalloid"){
+          }else if(type2 == "metalloid"){
             bond.innerHTML = "Metallic Bond";
         }
       }

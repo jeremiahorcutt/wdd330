@@ -25,6 +25,7 @@ async function getData(){
 
 const table = document.getElementById('periodicContainer');
 table.addEventListener('click', newElement);
+//table.addEventListener('touchend', newElement);
 
 window.onload = function() {
     createTable();
@@ -34,7 +35,7 @@ window.onload = function() {
     populateTable();
   };
  
-  //window.addEventListener('touchend', utils.getBlockId(data));
+  
 //function for creating the li elements of the periodic table and assigning them identifiers
  function createTable(){
     for(let i = 1; i < 127; i++){
@@ -211,6 +212,7 @@ async function elementDisplay(el){
   deleteBtn.setAttribute("type", "button");
   deleteBtn.setAttribute("class", `deleteBtn`);
   deleteBtn.setAttribute("value", "X");
+  deleteBtn.setAttribute('data-id', el.dataid);
   deleteBtn.onclick = removeElement;
   newElement.append(symbol,name,number,weight,boil,melt,deleteBtn);
   if(array[el.dataid].metallic_state == "metal"){
@@ -240,24 +242,22 @@ async function elementSelect(elem, dataId){
     };
 }
 
-//removes elements from the display divs
-function removeElement(newElement){
-    console.log(newElement);
-    newElement.remove();
-};
-
 function loadElements(){
   const elementList = ls.getElementList();
   elementList.forEach(element => {
-    const el = createElementDiv(element);
+  const elementNumber = element.dataid + 1;
+  const element1 = createElement(elementNumber);
+  const elementDiv = elementDisplay(element1);
+  elementSelect(elementDiv, elementNumber);
     
   })
 }
 
-function createElementDiv(element){
-    const div = document.createElement('div');
-    div.setAttribute('id', element.id + 'div')
-};
+function removeElement(e){
+  const btn = e.currentTarget;
+  ls.deleteElement(btn.getAttribute('data-id'));
+  loadElements();
+}
 
 async function bondDisplay(dataid){
     let elementCh = utils.elementCheck();

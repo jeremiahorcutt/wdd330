@@ -1,14 +1,13 @@
 function saveElements(element){
     const elementList = getElementList();
-  
     elementList.push(element);
     localStorage.setItem('elementList', JSON.stringify(elementList));
   };
   
   function deleteElement(id){
       const elementList = getElementList();
-      const updatedElements = elementList.filter( element => element.id != id)
-      localStorage.setItem('elemntList', JSON.stringify(updatedElements));
+      const updatedElements = elementList.filter( element => element.dataid != id)
+      localStorage.setItem('elementList', JSON.stringify(updatedElements));
   };
   
   function getElementList(){

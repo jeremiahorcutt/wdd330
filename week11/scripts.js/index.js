@@ -1,14 +1,27 @@
 import utils from './utilities.js';
 import ls from './ls.js';
 //JSON fetch
-const requestURL = 'https://jeremiahorcutt.github.io/wdd330/week11/elements.json';
+/* const requestURL = 'https://jeremiahorcutt.github.io/wdd330/week11/elements.json';
 fetch(requestURL)
   .then(function (response) {
     return response.json();
   })
   .then(function (jsonObject) {
     populateTable(jsonObject);
-      });
+      })
+  .catch((err) => {
+    console.error(err);
+      }); */
+
+async function getData(){
+  let url = 'https://jeremiahorcutt.github.io/wdd330/week11/elements.json';
+  try {
+    let res = await fetch(url);
+    return await res.json();
+} catch (error) {
+    console.log(error);
+}
+}
 
 const table = document.getElementById('periodicContainer');
 table.addEventListener('click', newElement);
@@ -18,6 +31,7 @@ window.onload = function() {
     groupRows();
     groupColumns();
     loadElements();
+    populateTable();
   };
  
   //window.addEventListener('touchend', utils.getBlockId(data));
@@ -137,7 +151,8 @@ for(let i = 1; i <= 18; i++){
 }
 
 //takes information from the JSON file and populates the periodic table
-function populateTable(data){
+async function populateTable(){
+    let data = await getData();
     let array = data['elements'];
     for(let i = 0; i < 126; i++){
       let id = i + 1;
@@ -164,61 +179,62 @@ function newElement(e){
   const elementNumber = e.target.dataset.id;
   const element = createElement(elementNumber);
   const elementDiv = elementDisplay(element);
-  elementSelect(elementDiv);
-  ls.saveElement(element);
+  elementSelect(elementDiv, elementNumber);
+  ls.saveElements(element);
 }
 
 function createElement(dataId){
-  const newElement = { id: Date.now(), dataid: dataId}
+  const newElement = {id: Date.now(), dataid: dataId - 1};
   return newElement;
 }
 
-
-
 //creates the display for the display div elements
-function elementDisplay(el){
+async function elementDisplay(el){
   let newElement = document.createElement("div");
-  let elNum = el.dataid + 1;
-  let data = request.response;
+  let data = await getData();
   let array = data['elements'];
   let symbol = document.createElement('h4');
-  symbol.innerHTML = array[elNum].symbol;
+  symbol.innerHTML = array[el.dataid].symbol;
   let name = document.createElement('h5');
-  name.innerHTML = array[elNum].name;
+  name.innerHTML = array[el.dataid].name;
   let number = document.createElement('p');
-  number.innerHTML = array[elNum].number;
-  number.setAttribute("class", "elNumber");
+  number.innerHTML = array[el.dataid].number;
+  number.setAttribute("class", "elnumber");
+  number.setAttribute('data-id', el.dataid);
   let weight = document.createElement('p');
-  weight.innerHTML = `Atomic Mass: ${array[elNum].atomic_mass}`;
+  weight.innerHTML = `Atomic Mass: ${array[el.dataid].atomic_mass}`;
   let boil = document.createElement('p');
-  boil.innerHTML = `Boiling Point: ${array[elNum].boil}`;
+  boil.innerHTML = `Boiling Point: ${array[el.dataid].boil}`;
   let melt = document.createElement('p');
-  melt.innerHTML = `Melting Point: ${array[elNum].melt}`;
+  melt.innerHTML = `Melting Point: ${array[el.dataid].melt}`;
   let deleteBtn = document.createElement('input');
   deleteBtn.setAttribute("type", "button");
   deleteBtn.setAttribute("class", `deleteBtn`);
   deleteBtn.setAttribute("value", "X");
   deleteBtn.onclick = removeElement;
   newElement.append(symbol,name,number,weight,boil,melt,deleteBtn);
-  if(array[elNum].metallic_state == "metal"){
+  if(array[el.dataid].metallic_state == "metal"){
      newElement.style.backgroundImage = "linear-gradient(180deg, rgba(106,4,15,1.00) 0%, rgba(55,6,23,1.00) 100%)";
-  }else if(array[elNum].metallic_state == "nonmetal"){
+  }else if(array[el.dataid].metallic_state == "nonmetal"){
     newElement.style.backgroundImage = "linear-gradient(180deg, rgba(220,47,2,1.00) 0%, rgba(208,0,0,1.00) 100%)";
-  }else if(array[elNum].metallic_state == "metalloid"){
+  }else if(array[el.dataid].metallic_state == "metalloid"){
     newElement.style.backgroundImage = "linear-gradient(180deg, rgba(255,186,8,1.00) 0%, rgba(250,163,7,1.00) 100%)";
   }
   return newElement;
 };
 
 //primary function that calls secondary functions and orginizes the data
-function elementSelect(element){
+async function elementSelect(elem, dataId){
+    let element = await elem;
     let elementCh = utils.elementCheck();
     const container1 = document.getElementById('elementDiv1');
     const container2 = document.getElementById('elementDiv2');
     if (elementCh == 0){
        container1.appendChild(element);
+       bondDisplay(dataId);
     }else if(elementCh == 1){
        container2.appendChild(element);
+       bondDisplay(dataId);
     }else if (elementCh == 2){
      alert('Please remove one of the elements from the display.')
     };
@@ -234,7 +250,7 @@ function loadElements(){
   const elementList = ls.getElementList();
   elementList.forEach(element => {
     const el = createElementDiv(element);
-    addToList(el);
+    
   })
 }
 
@@ -242,3 +258,24 @@ function createElementDiv(element){
     const div = document.createElement('div');
     div.setAttribute('id', element.id + 'div')
 };
+
+async function bondDisplay(){
+    let elementCh = utils.elementCheck();
+    let data = await getData();
+    let array = data['elements'];
+    if (elementCh == 2){
+      let element1 = document.querySelector('#element1Div div:nth-child(3)');
+      console.log(element1);
+      let element2 = document.querySelector('#element2Div div:nth-child(3)');
+      let id1 = element1.getAttribute("data-id");
+      console.log(id1);
+      let id2 = element2.getAttribute('data-id');
+      /*  if (){
+
+      }else if(){
+
+      }else if(){
+
+      } */
+    } 
+}

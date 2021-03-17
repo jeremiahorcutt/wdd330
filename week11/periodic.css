@@ -249,7 +249,7 @@ h5{
     margin-bottom: 3px;
     margin-top: 15px;
 }
-.elNumber{
+.elnumber{
     float: right;
     position: relative;
     top: -145px;
@@ -268,7 +268,7 @@ h5{
     height:25px;
     float:left;
     margin-left:5px;
-    top:-238px;
+    top:-235px;
     position:relative;
     font-weight:bold;
     font-size:15px;

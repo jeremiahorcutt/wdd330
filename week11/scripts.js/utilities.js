@@ -5,7 +5,6 @@ function elementCheck(){
   let element2 = document.querySelector("#elementDiv2 div");
   if(element1 && element2){
     return 2;
-    bondDisplay();
   }else if(!element1 && element2){
       return 0;
   }else if(element1 && !element2){

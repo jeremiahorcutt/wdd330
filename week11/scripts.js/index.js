@@ -259,23 +259,46 @@ function createElementDiv(element){
     div.setAttribute('id', element.id + 'div')
 };
 
-async function bondDisplay(){
+async function bondDisplay(dataid){
     let elementCh = utils.elementCheck();
     let data = await getData();
     let array = data['elements'];
     if (elementCh == 2){
-      let element1 = document.querySelector('#element1Div div:nth-child(3)');
-      console.log(element1);
-      let element2 = document.querySelector('#element2Div div:nth-child(3)');
-      let id1 = element1.getAttribute("data-id");
-      console.log(id1);
-      let id2 = element2.getAttribute('data-id');
-      /*  if (){
-
-      }else if(){
-
-      }else if(){
-
-      } */
+      let element1 = document.querySelector('#elementDiv1 div p.elnumber');
+      let idStr = element1.getAttribute("data-id");
+      let idInt = parseInt(idStr);
+      let element2 = document.querySelector('#elementDiv2 div p.elnumber');
+      let id2Str = element2.getAttribute('data-id');
+      let id2Int = parseInt(id2Str);
+      let type1 = array[idInt].metallic_state;
+      let type2 = array[id2Int].metallic_state;
+      let bond = document.createElement("h4");
+       if (type1  == "Metal"){
+          if(type2 == "Metal"){
+            bond.innerHTML = "Metallic Bond";
+          }else if(type2 == "Nonmetal"){
+            bond.innerHTML = "Ionic Bond";
+          }else if(type2 == "Metalloid"){
+            bond.innerHTML = "Metallic Bond";
+          }
+      }else if(type1 == "Nonmental"){
+          if(type2 == "Metal"){
+            bond.innerHTML = "Metalloid";
+          }else if(type2 == "Nonmetal"){
+            bond.innerHTML = "Covalent Bond";
+          }else if(type2 == "Metalloid"){
+            bond.innerHTML = "Covalent Bond";
+        } 
+      }else if(type1 == "Metalloid"){
+          if(type2 == "Metal"){
+            bond.innerHTML = "Metallic Bond";
+          }else if(type2 == "Nonmetal"){
+            bond.innerHTML = "Covalent Bond";
+          }else if(type2 == "Metalloid"){
+            bond.innerHTML = "Metallic Bond";
+        }
+      }
+      let bondDiv = document.getElementById("bondDiv");
+      bondDiv.appendChild(bond);
     } 
 }

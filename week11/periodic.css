@@ -56,8 +56,8 @@ header{
 }
 #periodicContainer{
     touch-action: auto;
-    width:350px;
-    height:350px;
+    width:330px;
+    height:330px;
     overflow: scroll;
     margin:0 auto;
     border:5px solid #2b2a2a;

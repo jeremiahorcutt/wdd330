@@ -258,16 +258,18 @@ function removeElement(e){
   const btn = e.currentTarget;
   ls.deleteElement(btn.getAttribute('data-id'));
   let id = btn.getAttribute('data-id')
-  clearDisplay();
+  clearDisplay(id);
   loadElements();
 }
 
-function clearDisplay(id);{
+function clearDisplay(id){
   const element = document.getElementById('deleteBtn' + id).parentElement;
+  const bond = document.querySelector('#bondDiv h4');
+  bond.remove();
   element.remove();
 }
 
-async function bondDisplay(dataid){
+async function bondDisplay(){
     let elementCh = utils.elementCheck();
     let data = await getData();
     let array = data['elements'];

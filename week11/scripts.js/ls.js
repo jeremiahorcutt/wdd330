@@ -1,7 +1,11 @@
 function saveElements(element){
     const elementList = getElementList();
+    if(elementList[1]){
+
+    }else{
     elementList.push(element);
     localStorage.setItem('elementList', JSON.stringify(elementList));
+    }
   };
   
   function deleteElement(id){

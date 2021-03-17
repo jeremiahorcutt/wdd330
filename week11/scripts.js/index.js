@@ -213,6 +213,7 @@ async function elementDisplay(el){
   deleteBtn.setAttribute("class", `deleteBtn`);
   deleteBtn.setAttribute("value", "X");
   deleteBtn.setAttribute('data-id', el.dataid);
+  deleteBtn.setAttribute('id', 'deleteBtn' + el.dataid);
   deleteBtn.onclick = removeElement;
   newElement.append(symbol,name,number,weight,boil,melt,deleteBtn);
   if(array[el.dataid].metallic_state == "metal"){
@@ -256,7 +257,14 @@ function loadElements(){
 function removeElement(e){
   const btn = e.currentTarget;
   ls.deleteElement(btn.getAttribute('data-id'));
+  let id = btn.getAttribute('data-id')
+  clearDisplay();
   loadElements();
+}
+
+function clearDisplay(id);{
+  const element = document.getElementById('deleteBtn' + id).parentElement;
+  element.remove();
 }
 
 async function bondDisplay(dataid){
